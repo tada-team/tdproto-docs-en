@@ -135,6 +135,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#deletedsection">DeletedSection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#deletedtag">DeletedTag</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#deletedteam">DeletedTeam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#emoji">Emoji</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#features">Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#fontcolors">FontColors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#groupmembership">GroupMembership</a></li>
@@ -160,6 +161,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#onlinecall">OnlineCall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#onlinecontact">OnlineContact</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pdfversion">PdfVersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reaction">Reaction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#receivedmessage">ReceivedMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#remind">Remind</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#section">Section</a></li>
@@ -494,7 +496,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">can_change_member_status</span></code> (boolean) - Can I change member status in this group chat. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_change_settings</span></code> (boolean) - deprecated: use changeable fields. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">default_for_all</span></code> (boolean) - Any new team member will be added to this group chat. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">readonly_for_members</span></code> (boolean) - Readonly for non-admins group chat (Like Channels in Telegram bug switchable). Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">readonly_for_members</span></code> (boolean) - Readonly for non-admins group chat (Like Channels in Telegram but switchable). Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">autocleanup_age</span></code> (number) - Delete messages in this chat in seconds. Experimental function. Maybe omitted. Might be null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span></code> (boolean) - Can other team member see this task/group chat. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_join</span></code> (boolean) - Can I join to this public group/task. Maybe omitted</p></li>
@@ -675,6 +677,15 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (string) - Team id</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">is_archive</span></code> (boolean) - Team deleted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">gentime</span></code> (number) - Object version</p></li>
+</ul>
+</div>
+<div class="section" id="emoji">
+<span id="tdproto-emoji"></span><h2>Emoji<a class="headerlink" href="#emoji" title="Permalink to this headline">¶</a></h2>
+<p>Emoji</p>
+<p><strong>Fields</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">char</span></code> (string) - Unicode symbol</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (string) - Text representation</p></li>
 </ul>
 </div>
 <div class="section" id="features">
@@ -1077,6 +1088,14 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (string) - Absolute url</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">text_preview</span></code> (string) - First string of text content. Maybe omitted</p></li>
+</ul>
+</div>
+<div class="section" id="reaction">
+<span id="tdproto-reaction"></span><h2>Reaction<a class="headerlink" href="#reaction" title="Permalink to this headline">¶</a></h2>
+<p>Emoji reaction</p>
+<p><strong>Fields</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (string) - Unicode symbol</p></li>
 </ul>
 </div>
 <div class="section" id="receivedmessage">
