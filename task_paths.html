@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Index &mdash; Tdproto docs  documentation</title>
+  <title>Task related paths &mdash; Tdproto docs  documentation</title>
   
 
   
@@ -41,8 +41,10 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-    <link rel="index" title="Index" href="#" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Group related paths" href="group_paths.html" />
+    <link rel="prev" title="Chat related paths" href="chat_paths.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -90,12 +92,12 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bot_howto.html">How to create bot.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="team_paths.html">Team related paths</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chat_paths.html">Chat related paths</a></li>
-<li class="toctree-l1"><a class="reference internal" href="task_paths.html">Task related paths</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Task related paths</a></li>
 <li class="toctree-l1"><a class="reference internal" href="group_paths.html">Group related paths</a></li>
 <li class="toctree-l1"><a class="reference internal" href="misc_paths.html">Miscelaneos paths</a></li>
 <li class="toctree-l1"><a class="reference internal" href="events.html">Client events</a></li>
@@ -151,12 +153,12 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Index</li>
+      <li>Task related paths</li>
     
     
     <li class="wy-breadcrumbs-aside">
         
-        <a style="color:red;font-size:36px;" href="https://tada-team.github.io/tdproto-docs-ru/genindex">🇷🇺</a>
+        <a style="color:red;font-size:36px;" href="https://tada-team.github.io/tdproto-docs-ru/task_paths">🇷🇺</a>
         
     </li>
 
@@ -168,11 +170,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
+  <div class="section" id="task-related-paths">
+<h1>Task related paths<a class="headerlink" href="#task-related-paths" title="Permalink to this headline">¶</a></h1>
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api-v4-teams-%s-tasks">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/%s/tasks</span></span><a class="headerlink" href="#post--api-v4-teams-%s-tasks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create new task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>team_uid</strong> – UID of the team.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Request JSON Object</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>task</strong> (<em>object</em>) – TODO: document <code class="docutils literal notranslate"><span class="pre">Task</span></code> object.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Response JSON Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Response JSON Array of Objects</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>result</strong> (<em>object</em>) – TODO: document <code class="docutils literal notranslate"><span class="pre">Task</span></code> object.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Status Codes</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
 </div>
 
 
@@ -180,6 +212,10 @@
            
           </div>
           <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="group_paths.html" class="btn btn-neutral float-right" title="Group related paths" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="chat_paths.html" class="btn btn-neutral float-left" title="Chat related paths" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 
