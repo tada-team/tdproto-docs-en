@@ -173,6 +173,104 @@
   <div class="section" id="team-related-paths">
 <h1>Team related paths<a class="headerlink" href="#team-related-paths" title="Permalink to this headline">¶</a></h1>
 <dl class="http get">
+<dt class="sig sig-object http" id="get--api-v4-teams">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams</span></span><a class="headerlink" href="#get--api-v4-teams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the list of teams on the server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Response JSON Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
+<li><p><strong>result</strong> (<em>array</em>) – List of <a class="reference internal" href="data_index.html#tdproto-team"><span class="std std-ref">Team</span></a> objects.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Status Codes</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-v4-teams-team_uid">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}</span></span><a class="headerlink" href="#get--api-v4-teams-team_uid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get team info.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>team_uid</strong> – UID of the team.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Response JSON Object</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
+<li><p><strong>result</strong> (<em>object</em>) – <a class="reference internal" href="data_index.html#tdproto-team"><span class="std std-ref">Team</span></a> object.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Status Codes</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http put">
+<dt class="sig sig-object http" id="put--api-v4-teams-team_uid">
+<span class="sig-name descname"><span class="pre">PUT</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}</span></span><a class="headerlink" href="#put--api-v4-teams-team_uid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update team settings.</p>
+<p>Must have admin rights.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>team_uid</strong> – UID of the team.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Request JSON Object</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>object</strong> – <a class="reference internal" href="data_index.html#tdproto-team"><span class="std std-ref">Team</span></a> info to create.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Response JSON Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
+<li><p><strong>result</strong> (<em>object</em>) – Updated <a class="reference internal" href="data_index.html#tdproto-team"><span class="std std-ref">Team</span></a> object of the team.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Status Codes</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http delete">
+<dt class="sig sig-object http" id="delete--api-v4-teams-team_uid">
+<span class="sig-name descname"><span class="pre">DELETE</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}</span></span><a class="headerlink" href="#delete--api-v4-teams-team_uid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the team.</p>
+<p>Must have admin rights.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>team_uid</strong> – UID of the team.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Response JSON Object</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
+<li><p><strong>result</strong> (<em>object</em>) – <a class="reference internal" href="data_index.html#tdproto-team"><span class="std std-ref">Team</span></a> object of deleted team.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Status Codes</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http get">
 <dt class="sig sig-object http" id="get--api-v4-teams-team_uid-chats">
 <span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/chats</span></span><a class="headerlink" href="#get--api-v4-teams-team_uid-chats" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the list of chats in the team.</p>
@@ -185,15 +283,11 @@
 <dt class="field-even">Response JSON Object</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
+<li><p><strong>result</strong> (<em>array</em>) – List of <a class="reference internal" href="data_index.html#tdproto-chat"><span class="std std-ref">Chat</span></a> objects.</p></li>
 </ul>
 </dd>
-<dt class="field-odd">Response JSON Array of Objects</dt>
+<dt class="field-odd">Status Codes</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>result</strong> (<em>object</em>) – List of <a class="reference internal" href="data_index.html#tdproto-chat"><span class="std std-ref">Chat</span></a> objects.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Status Codes</dt>
-<dd class="field-even"><ul class="simple">
 <li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error.</p></li>
 </ul>
 </dd>
@@ -213,43 +307,11 @@
 <dt class="field-even">Response JSON Object</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
+<li><p><strong>result</strong> (<em>array</em>) – List of <a class="reference internal" href="data_index.html#tdproto-contact"><span class="std std-ref">Contact</span></a> objects.</p></li>
 </ul>
 </dd>
-<dt class="field-odd">Response JSON Array of Objects</dt>
+<dt class="field-odd">Status Codes</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>result</strong> (<em>object</em>) – List of <a class="reference internal" href="data_index.html#tdproto-contact"><span class="std std-ref">Contact</span></a> objects.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Status Codes</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="http get">
-<dt class="sig sig-object http" id="get--api-v4-teams-team_uid">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}</span></span><a class="headerlink" href="#get--api-v4-teams-team_uid" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get my contact info.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID of the team.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Response JSON Object</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
-</ul>
-</dd>
-<dt class="field-odd">Response JSON Array of Objects</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>result</strong> (<em>object</em>) – My <a class="reference internal" href="data_index.html#tdproto-contact"><span class="std std-ref">Contact</span></a> object.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Status Codes</dt>
-<dd class="field-even"><ul class="simple">
 <li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error.</p></li>
 </ul>
 </dd>
@@ -275,11 +337,88 @@ as input with phone number set.</p>
 <dt class="field-odd">Response JSON Object</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
+<li><p><strong>result</strong> (<em>object</em>) – New <a class="reference internal" href="data_index.html#tdproto-contact"><span class="std std-ref">Contact</span></a> object.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Response JSON Array of Objects</dt>
+<dt class="field-even">Status Codes</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>result</strong> (<em>object</em>) – New <a class="reference internal" href="data_index.html#tdproto-contact"><span class="std std-ref">Contact</span></a> object.</p></li>
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-v4-teams-team_uid-contacts-contact_id">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/contacts/{contact_id}</span></span><a class="headerlink" href="#get--api-v4-teams-team_uid-contacts-contact_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get contact details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>team_uid</strong> – UID of the team.</p></li>
+<li><p><strong>contact_id</strong> – ID of the contact.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Response JSON Object</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
+<li><p><strong>result</strong> (<em>object</em>) – The <a class="reference internal" href="data_index.html#tdproto-contact"><span class="std std-ref">Contact</span></a> object.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Status Codes</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api-v4-teams-team_uid-contacts-contact_id">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/contacts/{contact_id}</span></span><a class="headerlink" href="#post--api-v4-teams-team_uid-contacts-contact_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update contact details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>team_uid</strong> – UID of the team.</p></li>
+<li><p><strong>contact_id</strong> – ID of the contact.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Request JSON Object</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>object</strong> – <a class="reference internal" href="data_index.html#tdproto-contact"><span class="std std-ref">Contact</span></a> object with updated fields.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Response JSON Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
+<li><p><strong>result</strong> (<em>object</em>) – Updated <a class="reference internal" href="data_index.html#tdproto-contact"><span class="std std-ref">Contact</span></a> object.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Status Codes</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http delete">
+<dt class="sig sig-object http" id="delete--api-v4-teams-team_uid-contacts-contact_id">
+<span class="sig-name descname"><span class="pre">DELETE</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/contacts/{contact_id}</span></span><a class="headerlink" href="#delete--api-v4-teams-team_uid-contacts-contact_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove contact from the team.</p>
+<p>Must have admin rights.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>team_uid</strong> – UID of the team.</p></li>
+<li><p><strong>contact_id</strong> – ID of the contact.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Response JSON Object</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
+<li><p><strong>result</strong> (<em>object</em>) – Removed <a class="reference internal" href="data_index.html#tdproto-contact"><span class="std std-ref">Contact</span></a> object.</p></li>
 </ul>
 </dd>
 <dt class="field-odd">Status Codes</dt>
