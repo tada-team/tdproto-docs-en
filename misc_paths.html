@@ -44,7 +44,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Client events" href="events.html" />
-    <link rel="prev" title="Group related paths" href="group_paths.html" /> 
+    <link rel="prev" title="Group related paths." href="group_paths.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,10 +95,10 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bot_howto.html">How to create bot.</a></li>
-<li class="toctree-l1"><a class="reference internal" href="team_paths.html">Team related paths</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chat_paths.html">Chat related paths</a></li>
+<li class="toctree-l1"><a class="reference internal" href="team_paths.html">Team related paths.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chat_paths.html">Chat related paths.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="task_paths.html">Task related paths</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group_paths.html">Group related paths</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group_paths.html">Group related paths.</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Miscelaneos paths</a></li>
 <li class="toctree-l1"><a class="reference internal" href="events.html">Client events</a></li>
 <li class="toctree-l1"><a class="reference internal" href="events.html#server-events">Server events</a></li>
@@ -173,154 +173,30 @@
   <div class="section" id="miscelaneos-paths">
 <h1>Miscelaneos paths<a class="headerlink" href="#miscelaneos-paths" title="Permalink to this headline">¶</a></h1>
 <dl class="http get">
-<dt class="sig sig-object http" id="get--api​-v4​-addr">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api​/v4​/addr</span></span><a class="headerlink" href="#get--api​-v4​-addr" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object http" id="get--api-v4-addr">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/addr</span></span><a class="headerlink" href="#get--api-v4-addr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns client address for debuging purposes.</p>
-<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_addr">Try it!</a></p>
-<p><strong>Example</strong>:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;ok&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;result&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_addr">🔍 Try it!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Response JSON Object</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
-<li><p><strong>result</strong> (<em>string</em>) – Set to <code class="docutils literal notranslate"><span class="pre">&quot;pong&quot;</span></code>.</p></li>
+<li><p><strong>result</strong> (<em>string</em>) – Address of the server.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Status Codes</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error</p></li>
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="http get">
-<dt class="sig sig-object http" id="get-​-api​-v4​-alltimezones">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">​/api​/v4​/alltimezones</span></span><a class="headerlink" href="#get-​-api​-v4​-alltimezones" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get list of timezones.</p>
-<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_alltimezones">Try it!</a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Status Codes</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="http get">
-<dt class="sig sig-object http" id="get-​-api​-v4​-countries">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">​/api​/v4​/countries</span></span><a class="headerlink" href="#get-​-api​-v4​-countries" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get list of country phone codes.</p>
-<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_countries">Try it!</a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Status Codes</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="http get">
-<dt class="sig sig-object http" id="get--api​-v4​-emoji">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api​/v4​/emoji</span></span><a class="headerlink" href="#get--api​-v4​-emoji" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the emoji list.</p>
-<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_emoji">Try it!</a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Status Codes</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="http post">
-<dt class="sig sig-object http" id="post--api​-v4​-join​-token">
-<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api​/v4​/join​/{token}</span></span><a class="headerlink" href="#post--api​-v4​-join​-token" title="Permalink to this definition">¶</a></dt>
-<dd><p>Join the team.</p>
-<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/post_api_v4_join__token_">Try it!</a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>token</strong> – Invite token to join team.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Response JSON Object</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
-<li><p><strong>result</strong> (<em>object</em>) – <a class="reference internal" href="data_index.html#tdproto-team"><span class="std std-ref">Team</span></a> object.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="http get">
-<dt class="sig sig-object http" id="get--api​-v4​-join​-token​-preview">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api​/v4​/join​/{token}​/preview</span></span><a class="headerlink" href="#get--api​-v4​-join​-token​-preview" title="Permalink to this definition">¶</a></dt>
-<dd><p>Invitation information.</p>
-<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_join__token__preview">Try it!</a></p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;ok&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;result&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;icons&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;blurhash&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;letters&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;lg&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;height&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;width&quot;</span><span class="p">:</span> <span class="mi">0</span>
-      <span class="p">},</span>
-      <span class="nt">&quot;sm&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;height&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;width&quot;</span><span class="p">:</span> <span class="mi">0</span>
-      <span class="p">},</span>
-      <span class="nt">&quot;stub&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;uid&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>token</strong> – Invite token to preview.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Response JSON Object</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
-<li><p><strong>result</strong> (<em>object</em>) – Invite information.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="http get">
-<dt class="sig sig-object http" id="get-​-api​-v4​-ping">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">​/api​/v4​/ping</span></span><a class="headerlink" href="#get-​-api​-v4​-ping" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object http" id="get--api-v4-ping">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/ping</span></span><a class="headerlink" href="#get--api-v4-ping" title="Permalink to this definition">¶</a></dt>
 <dd><p>Ping the server.</p>
-<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_ping">Try it!</a></p>
-<p><strong>Example response</strong>:</p>
-<div class="highlight-http notranslate"><div class="highlight"><pre><span></span><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
-<span class="na">Content-Type</span><span class="o">:</span> <span class="l">text/javascript</span>
-
-<span class="p">{</span>
-  <span class="s2">&quot;ok&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="s2">&quot;result&quot;</span><span class="o">:</span> <span class="s2">&quot;pong&quot;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_ping">🔍 Try it!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Response JSON Object</dt>
 <dd class="field-odd"><ul class="simple">
@@ -330,55 +206,27 @@
 </dd>
 <dt class="field-even">Status Codes</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error</p></li>
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="http get">
-<dt class="sig sig-object http" id="get--api​-v4​-reactions">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api​/v4​/reactions</span></span><a class="headerlink" href="#get--api​-v4​-reactions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the list of available reactions.</p>
-<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_reactions">Try it!</a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Status Codes</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="http get">
-<dt class="sig sig-object http" id="get--api​-v4​-time">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api​/v4​/time</span></span><a class="headerlink" href="#get--api​-v4​-time" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get server time.</p>
-<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_time">Try it!</a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Status Codes</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="http get">
-<dt class="sig sig-object http" id="get-features.json">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">features.json</span></span><a class="headerlink" href="#get-features.json" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the server information.</p>
-<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/getfeatures_json">Try it!</a></p>
+<dt class="sig sig-object http" id="get--features.json">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/features.json</span></span><a class="headerlink" href="#get--features.json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the server features information.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_features.json">🔍 Try it!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Response JSON Object</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
-<li><p><strong>result</strong> (<em>object</em>) – <a class="reference internal" href="data_index.html#tdproto-features"><span class="std std-ref">Features</span></a> object.</p></li>
+<li><p><strong>result</strong> (<em>object</em>) – The <a class="reference internal" href="data_index.html#tdproto-features"><span class="std std-ref">Features</span></a> object.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Status Codes</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error</p></li>
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error.</p></li>
 </ul>
 </dd>
 </dl>
@@ -393,7 +241,7 @@
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="events.html" class="btn btn-neutral float-right" title="Client events" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="group_paths.html" class="btn btn-neutral float-left" title="Group related paths" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="group_paths.html" class="btn btn-neutral float-left" title="Group related paths." accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Group related paths &mdash; Tdproto docs  documentation</title>
+  <title>Group related paths. &mdash; Tdproto docs  documentation</title>
   
 
   
@@ -95,10 +95,10 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bot_howto.html">How to create bot.</a></li>
-<li class="toctree-l1"><a class="reference internal" href="team_paths.html">Team related paths</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chat_paths.html">Chat related paths</a></li>
+<li class="toctree-l1"><a class="reference internal" href="team_paths.html">Team related paths.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chat_paths.html">Chat related paths.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="task_paths.html">Task related paths</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Group related paths</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Group related paths.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="misc_paths.html">Miscelaneos paths</a></li>
 <li class="toctree-l1"><a class="reference internal" href="events.html">Client events</a></li>
 <li class="toctree-l1"><a class="reference internal" href="events.html#server-events">Server events</a></li>
@@ -153,7 +153,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Group related paths</li>
+      <li>Group related paths.</li>
     
     
     <li class="wy-breadcrumbs-aside">
@@ -171,15 +171,16 @@
            <div itemprop="articleBody">
             
   <div class="section" id="group-related-paths">
-<h1>Group related paths<a class="headerlink" href="#group-related-paths" title="Permalink to this headline">¶</a></h1>
+<h1>Group related paths.<a class="headerlink" href="#group-related-paths" title="Permalink to this headline">¶</a></h1>
 <dl class="http get">
-<dt class="sig sig-object http" id="get--api-v4-teams-team_uid-groups">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/groups</span></span><a class="headerlink" href="#get--api-v4-teams-team_uid-groups" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object http" id="get--api-v4-teams-team_id-groups">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}/groups</span></span><a class="headerlink" href="#get--api-v4-teams-team_id-groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get all groups in the team.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_teams__team_id__groups">🔍 Try it!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID of the team.</p></li>
+<li><p><strong>team_id</strong> – ID of the team.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Response JSON Object</dt>
@@ -196,59 +197,24 @@
 </dl>
 </dd></dl>
 
-<dl class="http post">
-<dt class="sig sig-object http" id="post--api-v4-teams-team_uid-groups">
-<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/groups</span></span><a class="headerlink" href="#post--api-v4-teams-team_uid-groups" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create new group.</p>
+<dl class="http delete">
+<dt class="sig sig-object http" id="delete--api-v4-teams-team_id-groups">
+<span class="sig-name descname"><span class="pre">DELETE</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}/groups</span></span><a class="headerlink" href="#delete--api-v4-teams-team_id-groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the group.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/delete_api_v4_teams__team_id__groups">🔍 Try it!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID of the team.</p></li>
+<li><p><strong>team_id</strong> – ID of the team.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Request JSON Object</dt>
+<dt class="field-even">Response JSON Object</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>new_group</strong> (<em>object</em>) – TODO: document group object.</p></li>
-</ul>
-</dd>
-<dt class="field-odd">Response JSON Object</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
-<li><p><strong>result</strong> (<em>array</em>) – <a class="reference internal" href="data_index.html#tdproto-chat"><span class="std std-ref">Chat</span></a> object.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Status Codes</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="http post">
-<dt class="sig sig-object http" id="post--api-v4-teams-team_uid-groups-group_id-members">
-<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/groups/{group_id}/members</span></span><a class="headerlink" href="#post--api-v4-teams-team_uid-groups-group_id-members" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add a new member to the team.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Status Codes</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID of the team.</p></li>
-<li><p><strong>group_id</strong> – Group ID to add member to.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Request JSON Object</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>new_group</strong> (<em>object</em>) – TODO: document group object.</p></li>
-</ul>
-</dd>
-<dt class="field-odd">Response JSON Object</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
-<li><p><strong>result</strong> (<em>array</em>) – <a class="reference internal" href="data_index.html#tdproto-groupmembership"><span class="std std-ref">GroupMembership</span></a> object.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Status Codes</dt>
-<dd class="field-even"><ul class="simple">
 <li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error.</p></li>
 </ul>
 </dd>
@@ -256,14 +222,15 @@
 </dd></dl>
 
 <dl class="http get">
-<dt class="sig sig-object http" id="get--api-v4-teams-team_uid-groups-group_id-members">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/groups/{group_id}/members</span></span><a class="headerlink" href="#get--api-v4-teams-team_uid-groups-group_id-members" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object http" id="get--api-v4-teams-team_id-groups-group_id-members">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}/groups/{group_id}/members</span></span><a class="headerlink" href="#get--api-v4-teams-team_id-groups-group_id-members" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the list of group members.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_teams__team_id__groups__group_id__members">🔍 Try it!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID of the team.</p></li>
-<li><p><strong>group_id</strong> – Group ID to add member to.</p></li>
+<li><p><strong>team_id</strong> – ID of the team.</p></li>
+<li><p><strong>group_id</strong> – ID of the group.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Response JSON Object</dt>
@@ -281,45 +248,22 @@
 </dd></dl>
 
 <dl class="http delete">
-<dt class="sig sig-object http" id="delete--api-v4-teams-team_uid-groups-group_id-members-contact_id">
-<span class="sig-name descname"><span class="pre">DELETE</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/groups/{group_id}/members/{contact_id}</span></span><a class="headerlink" href="#delete--api-v4-teams-team_uid-groups-group_id-members-contact_id" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object http" id="delete--api-v4-teams-team_id-groups-group_id-members-contact_id">
+<span class="sig-name descname"><span class="pre">DELETE</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}/groups/{group_id}/members/{contact_id}</span></span><a class="headerlink" href="#delete--api-v4-teams-team_id-groups-group_id-members-contact_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove member from the group.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/delete_api_v4_teams__team_id__groups__group_id__members__contact_id_">🔍 Try it!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID of the team.</p></li>
-<li><p><strong>group_id</strong> – Group ID to add member to.</p></li>
-<li><p><strong>group_id</strong> – Contact ID of the member to remove.</p></li>
+<li><p><strong>team_id</strong> – ID of the team.</p></li>
+<li><p><strong>contact_id</strong> – ID of the contact.</p></li>
+<li><p><strong>group_id</strong> – ID of the group.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Response JSON Object</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
-<li><p><strong>result</strong> (<em>array</em>) – List of <a class="reference internal" href="data_index.html#tdproto-groupmembership"><span class="std std-ref">GroupMembership</span></a> objects.</p></li>
-</ul>
-</dd>
-<dt class="field-odd">Status Codes</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="http delete">
-<dt class="sig sig-object http" id="delete--api-v4-teams-team_uid-groups-group_id">
-<span class="sig-name descname"><span class="pre">DELETE</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/groups/{group_id}</span></span><a class="headerlink" href="#delete--api-v4-teams-team_uid-groups-group_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Delete the group.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID of the team.</p></li>
-<li><p><strong>group_id</strong> – Group ID to add member to.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Response JSON Object</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
+<li><p><strong>result</strong> (<em>object</em>) – The <a class="reference internal" href="data_index.html#tdproto-groupmembership"><span class="std std-ref">GroupMembership</span></a> object.</p></li>
 </ul>
 </dd>
 <dt class="field-odd">Status Codes</dt>
