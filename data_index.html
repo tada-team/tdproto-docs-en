@@ -410,13 +410,19 @@
 </div>
 <div class="section" id="callevent">
 <span id="tdproto-callevent"></span><h2>CallEvent<a class="headerlink" href="#callevent" title="Permalink to this headline">¶</a></h2>
-<p>Audio call information</p>
+<p>Call information</p>
 <p><strong>Fields</strong>:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (string) - Call start. Might be null</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">finish</span></code> (string) - Call finish. Might be null</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Chat or contact id</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (string) - Call id</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">buzz</span></code> (boolean) - Call buzzing. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">created</span></code> (string) - Creation date, iso datetime</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (string) - Call start. For direct calls can be empty when buzzing. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">finish</span></code> (string) - Call finish. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">audiorecord</span></code> (boolean) - Call record enabled</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">onliners</span></code> (<a class="reference internal" href="#tdproto-callonliner"><span class="std std-ref">CallOnliner</span></a>) - Call participants. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gentime</span></code> (number) - Version</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timestamp</span></code> (number) - Deprecated: use gentime or created</p></li>
 </ul>
 </div>
 <div class="section" id="callonliner">
@@ -630,7 +636,8 @@
 <p>Country for phone numbers selection on login screen</p>
 <p><strong>Fields</strong>:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code> (string) - Country code</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code> (string) - Phone code</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iso</span></code> (string) - Country ISO code</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (string) - Country name</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (boolean) - Selected by default. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">popular</span></code> (boolean) - Is popular, need to cache. Maybe omitted</p></li>
@@ -735,7 +742,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">custom_server</span></code> (boolean) - True for premise installation</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">installation_type</span></code> (string) - Name of installation</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">installation_title</span></code> (string) - Installation title, used on login screen. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">background</span></code> (string) - Background image url, if any. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">app_login_background</span></code> (string) - AppBackground image url, if any. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">web_login_background</span></code> (string) - WebBackground image url, if any. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">is_testing</span></code> (boolean) - Testing installation</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">metrika</span></code> (string) - Yandex metrika counter id</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">min_search_length</span></code> (number) - Minimal chars number for starting global search</p></li>
@@ -761,6 +769,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">wiki_pages</span></code> (boolean) - Wiki pages in chats. Experimental</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allow_admin_mute</span></code> (boolean) - Wiki pages in chats. Experimental. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">default_wallpaper</span></code> (<a class="reference internal" href="#tdproto-wallpaper"><span class="std std-ref">Wallpaper</span></a>) - Default wallpaper url for mobile apps, if any. Maybe omitted. Might be null</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">support_email</span></code> (string) - Support email</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task_checklist</span></code> (boolean) - Deprecated</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">readonly_groups</span></code> (boolean) - Deprecated</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task_dashboard</span></code> (boolean) - Deprecated</p></li>
@@ -1070,7 +1079,7 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Chat or contact id</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (string) - Call id</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (string) - Call start. Maybe omitted. Might be null</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (string) - Call start. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">online_count</span></code> (number) - Number participants in call. Maybe omitted</p></li>
 </ul>
 </div>

@@ -641,15 +641,17 @@
 </div>
 <div class="section" id="server-call-state">
 <h2>server.call.state<a class="headerlink" href="#server-call-state" title="Permalink to this headline">¶</a></h2>
-<p>Call participant number or parameters changed</p>
+<p>Call information</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">audiorecord</span></code> - Call record enabled</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">buzz</span></code> - Call buzzing</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">finish</span></code> - Call finish, if any</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">created</span></code> - Creation date, iso datetime</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">finish</span></code> - Call finish</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gentime</span></code> - Version</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - Chat or contact id</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">onliners</span></code> - Call participants</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> - Call start, if any</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timestamp</span></code> - Event start. FIXME: why not gentime?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> - Call start. For direct calls can be empty when buzzing</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timestamp</span></code> - Deprecated: use gentime or created</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> - Call id</p></li>
 </ul>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
