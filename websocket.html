@@ -94,7 +94,7 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bot_howto.html">How to create bot.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bot_howto.html">How to create bot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="team_paths.html">Team related paths.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chat_paths.html">Chat related paths.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="task_paths.html">Task related paths</a></li>
@@ -190,6 +190,9 @@ where team_id is the team JID to create websocket for. This means each team
 has to have a separated websocket connection if you want to receive events from
 multiple teams.</p>
 <p><code class="docutils literal notranslate"><span class="pre">web.tada.team</span></code> can be substituted for custom domain.</p>
+<p>Connecting to websocket requires authentication. To authenticate you must
+include the HTTP header <code class="docutils literal notranslate"><span class="pre">token</span></code> with your bot token in the connection handshake.
+See <a class="reference internal" href="bot_howto.html"><span class="doc">How to create bot</span></a> on how to acquire bot token.</p>
 </div>
 <div class="section" id="event-json-objects">
 <h2>Event JSON objects<a class="headerlink" href="#event-json-objects" title="Permalink to this headline">¶</a></h2>
