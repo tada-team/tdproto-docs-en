@@ -94,10 +94,10 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bot_howto.html">How to create bot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="team_paths.html">Team related paths.</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chat_paths.html">Chat related paths.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="team_paths.html">Team related paths</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chat_paths.html">Chat related paths</a></li>
 <li class="toctree-l1"><a class="reference internal" href="task_paths.html">Task related paths</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group_paths.html">Group related paths.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group_paths.html">Group related paths</a></li>
 <li class="toctree-l1"><a class="reference internal" href="misc_paths.html">Miscelaneos paths</a></li>
 <li class="toctree-l1"><a class="reference internal" href="websocket.html">Websockets documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="events.html">Client events</a></li>
@@ -177,6 +177,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#subtask">Subtask</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#switchercolors">SwitcherColors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tag">Tag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task">Task</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#taskcolor">TaskColor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#taskcounters">TaskCounters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#taskfilter">TaskFilter</a></li>
@@ -1216,6 +1217,30 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (string) - Tag id</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (string) - Tag name</p></li>
+</ul>
+</div>
+<div class="section" id="task">
+<span id="tdproto-task"></span><h2>Task<a class="headerlink" href="#task" title="Permalink to this headline">¶</a></h2>
+<p>Task</p>
+<p><strong>Fields</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">custom_color_index</span></code> (number) - Custom task color. Maybe omitted. Might be null</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (string) - Task description. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (string) - Task tags. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">section</span></code> (string) - Task section UID. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">observers</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - User who follow the task. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">items</span></code> (string) - Items of the task. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">assignee</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - User who was assigned the task. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deadline</span></code> (string) - Deadline time. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span></code> (boolean) - Is task public. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remind_at</span></code> (string) - Fire a reminder at this time. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">task_status</span></code> (string) - Task status. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">importance</span></code> (number) - Task importance. Maybe omitted. Might be null</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">urgency</span></code> (number) - Task urgency. Maybe omitted. Might be null</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">complexity</span></code> (number) - Task complexity. Maybe omitted. Might be null</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spent_time</span></code> (number) - Time spent. Maybe omitted. Might be null</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linked_messages</span></code> (string) - Linked messages. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uploads</span></code> (string) - Task uploads. Maybe omitted</p></li>
 </ul>
 </div>
 <div class="section" id="taskcolor">
