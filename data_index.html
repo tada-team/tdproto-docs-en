@@ -354,6 +354,7 @@
 </div>
 <div class="section" id="isodatetimestring">
 <span id="tdproto-isodatetimestring"></span><h2>ISODateTimeString<a class="headerlink" href="#isodatetimestring" title="Permalink to this headline">¶</a></h2>
+<p>Date and time in RFC3339 format. Example: <code class="docutils literal notranslate"><span class="pre">2019-09-18T00:00:07.435409Z</span></code></p>
 <p><strong>Base Type</strong>: string</p>
 </div>
 <div class="section" id="jid">
@@ -371,6 +372,7 @@
 </div>
 <div class="section" id="rgbcolor">
 <span id="tdproto-rgbcolor"></span><h2>RGBColor<a class="headerlink" href="#rgbcolor" title="Permalink to this headline">¶</a></h2>
+<p>Color in <code class="docutils literal notranslate"><span class="pre">#rrggbb</span></code> format where <code class="docutils literal notranslate"><span class="pre">rr</span></code>, <code class="docutils literal notranslate"><span class="pre">gg</span></code>, <code class="docutils literal notranslate"><span class="pre">bb</span></code> are hexadecimal numbers from 00 to ff of red, green and blue channels correspondingly. (yellow would be <code class="docutils literal notranslate"><span class="pre">#ffff00</span></code>)</p>
 <p><strong>Base Type</strong>: string</p>
 </div>
 <div class="section" id="taskfilterkey">
@@ -716,7 +718,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">ios_app</span></code> (string) - Link to AppStore</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">android_app</span></code> (string) - Link to Google Play</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">theme</span></code> (string) - Default UI theme</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">min_app_version</span></code> (string) - Minimal application version required for this server. Used for breaking changes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_ios_version</span></code> (string) - Minimal iOS application version required for this server. Used for breaking changes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_android_version</span></code> (string) - Minimal android application version required for this server. Used for breaking changes</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">free_registration</span></code> (boolean) - Free registration allowed</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">max_upload_mb</span></code> (number) - Maximum size of user’s upload</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">max_linked_messages</span></code> (number) - Maximum number of forwarded messages</p></li>
@@ -759,7 +762,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">firebase_database_url</span></code> (string) - Firebase settings for web-push notifications</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">firebase_project_id</span></code> (string) - Firebase settings for web-push notifications</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">firebase_storage_bucket</span></code> (string) - Firebase settings for web-push notifications</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">calls</span></code> (boolean) - Calls functions enabled</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">calls_version</span></code> (number) - Calls version. 0 = disabled, 1 = audio only, 2 = audio+video</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mobile_calls</span></code> (boolean) - Calls functions enabled for mobile applications</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">calls_record</span></code> (boolean) - Calls record enabled</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">only_one_device_per_call</span></code> (boolean) - Disallow call from multiply devices. Experimental. Maybe omitted</p></li>
@@ -778,6 +781,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">task_messages</span></code> (boolean) - Deprecated</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task_public</span></code> (boolean) - Deprecated</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task_tags</span></code> (boolean) - Deprecated</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">calls</span></code> (boolean) - Deprecated</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_app_version</span></code> (string) - Deprecated</p></li>
 </ul>
 </div>
 <div class="section" id="fontcolors">

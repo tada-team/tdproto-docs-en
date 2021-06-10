@@ -103,6 +103,7 @@
 <li class="toctree-l1"><a class="reference internal" href="websocket.html">Websockets documentation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Client events</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#client-activity">client.activity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#client-call-answer">client.call.answer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#client-call-buzzcancel">client.call.buzzcancel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#client-call-leave">client.call.leave</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#client-call-muteall">client.call.muteall</a></li>
@@ -125,6 +126,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#server-call-checkfingerprint">server.call.checkfingerprint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-call-leave">server.call.leave</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-call-muteall">server.call.muteall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#server-call-offer">server.call.offer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-call-reject">server.call.reject</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-call-restart">server.call.restart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-call-sound">server.call.sound</a></li>
@@ -246,6 +248,15 @@
 <span class="p">}</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="client-call-answer">
+<h2>client.call.answer<a class="headerlink" href="#client-call-answer" title="Permalink to this headline">¶</a></h2>
+<p>Signal server about answer</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - Chat or contact id</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sdp</span></code> - SDP (session description protocol) data</p></li>
+</ul>
+<p><strong>MISSING EXAMPLE</strong></p>
 </div>
 <div class="section" id="client-call-buzzcancel">
 <h2>client.call.buzzcancel<a class="headerlink" href="#client-call-buzzcancel" title="Permalink to this headline">¶</a></h2>
@@ -608,6 +619,15 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - Chat or contact id</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">muted</span></code> - Mute state</p></li>
+</ul>
+<p><strong>MISSING EXAMPLE</strong></p>
+</div>
+<div class="section" id="server-call-offer">
+<h2>server.call.offer<a class="headerlink" href="#server-call-offer" title="Permalink to this headline">¶</a></h2>
+<p>Signal client about offer</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - Chat or contact id</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sdp</span></code> - SDP (session description protocol) data</p></li>
 </ul>
 <p><strong>MISSING EXAMPLE</strong></p>
 </div>
