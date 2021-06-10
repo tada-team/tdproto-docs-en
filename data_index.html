@@ -424,7 +424,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (string) - Call start. For direct calls can be empty when buzzing. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">finish</span></code> (string) - Call finish. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">audiorecord</span></code> (boolean) - Call record enabled</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">onliners</span></code> (<a class="reference internal" href="#tdproto-callonliner"><span class="std std-ref">CallOnliner</span></a>) - Call participants. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onliners</span></code> (array[<a class="reference internal" href="#tdproto-callonliner"><span class="std std-ref">CallOnliner</span></a>]) - Call participants. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">gentime</span></code> (number) - Version</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timestamp</span></code> (number) - Deprecated: use gentime or created</p></li>
 </ul>
@@ -439,7 +439,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (string) - Contact role</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">icon</span></code> (string) - Contact icon</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">muted</span></code> (boolean) - Microphone muted. Computed from devices muted states</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">devices</span></code> (<a class="reference internal" href="#tdproto-calldevice"><span class="std std-ref">CallDevice</span></a>) - Member devices, strictly one for now</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">devices</span></code> (array[<a class="reference internal" href="#tdproto-calldevice"><span class="std std-ref">CallDevice</span></a>]) - Member devices, strictly one for now</p></li>
 </ul>
 </div>
 <div class="section" id="chat">
@@ -469,13 +469,13 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">last_message</span></code> (<a class="reference internal" href="#tdproto-message"><span class="std std-ref">Message</span></a>) - Last message object. Maybe omitted. Might be null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">last_read_message_id</span></code> (string) - Last read message id, if any. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">section</span></code> (string) - Project / section id, if any. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">changeable_fields</span></code> (string) - List of editable fields. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">changeable_fields</span></code> (array[string]) - List of editable fields. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pinned</span></code> (boolean) - Is chat pinned on top. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pinned_sort_ordering</span></code> (number) - Sort ordering for pinned chat. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">num_members</span></code> (number) - Non-archive participants number. Maybe omitted. Might be null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_delete</span></code> (boolean) - Can I delete this chat. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (string) - Group or task description. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">markup</span></code> (<a class="reference internal" href="#tdproto-markupentity"><span class="std std-ref">MarkupEntity</span></a>) - Markup entities for description field. Experimental. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">markup</span></code> (array[<a class="reference internal" href="#tdproto-markupentity"><span class="std std-ref">MarkupEntity</span></a>]) - Markup entities for description field. Experimental. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">feed</span></code> (boolean) - Present in feed (main screen). Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pinned_message</span></code> (<a class="reference internal" href="#tdproto-message"><span class="std std-ref">Message</span></a>) - Pinned message for this chat. Maybe omitted. Might be null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">color_index</span></code> (number) - Custom color index from table of colors. Tasks only. Maybe omitted. Might be null</p></li>
@@ -483,7 +483,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">num_checked_items</span></code> (number) - Checked items in checklist. Tasks only. Maybe omitted. Might be null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">assignee</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Assignee contact id. Tasks only. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">num</span></code> (number) - Task number in this team. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">observers</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Task followers id’s. TODO: rename to “followers”. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">observers</span></code> (array[<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>]) - Task followers id’s. TODO: rename to “followers”. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">owner</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Task creator. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task_status</span></code> (string) - Task status. May be custom. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (string) - Task title. Generated from number and description. Maybe omitted</p></li>
@@ -492,18 +492,18 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">deadline</span></code> (string) - Task deadline in iso format, if any. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">deadline_expired</span></code> (boolean) - Is task deadline expired. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">links</span></code> (<a class="reference internal" href="#tdproto-messagelinks"><span class="std std-ref">MessageLinks</span></a>) - Links in description. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (string) - Task tags list, if any. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (array[string]) - Task tags list, if any. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">importance</span></code> (number) - Task importance, if available in team. Maybe omitted. Might be null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">urgency</span></code> (number) - Task urgency, if available in team. Maybe omitted. Might be null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spent_time</span></code> (number) - Task spent time, number. Maybe omitted. Might be null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">complexity</span></code> (number) - Task complexity, number. Maybe omitted. Might be null</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">linked_messages</span></code> (any) - Used for “Create task from messages…”. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">uploads</span></code> (<a class="reference internal" href="#tdproto-upload"><span class="std std-ref">Upload</span></a>) - Upload uids for request, upload objects for response. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">items</span></code> (<a class="reference internal" href="#tdproto-taskitem"><span class="std std-ref">TaskItem</span></a>) - Checklist items. Task only. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">parents</span></code> (<a class="reference internal" href="#tdproto-subtask"><span class="std std-ref">Subtask</span></a>) - Parent tasks. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tabs</span></code> (<a class="reference internal" href="#tdproto-tasktabkey"><span class="std std-ref">TaskTabKey</span></a>) - Tab names. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linked_messages</span></code> (array[any]) - Used for “Create task from messages…”. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uploads</span></code> (array[<a class="reference internal" href="#tdproto-upload"><span class="std std-ref">Upload</span></a>]) - Upload uids for request, upload objects for response. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">items</span></code> (array[<a class="reference internal" href="#tdproto-taskitem"><span class="std std-ref">TaskItem</span></a>]) - Checklist items. Task only. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parents</span></code> (array[<a class="reference internal" href="#tdproto-subtask"><span class="std std-ref">Subtask</span></a>]) - Parent tasks. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tabs</span></code> (array[<a class="reference internal" href="#tdproto-tasktabkey"><span class="std std-ref">TaskTabKey</span></a>]) - Tab names. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<a class="reference internal" href="#tdproto-groupstatus"><span class="std std-ref">GroupStatus</span></a>) - My status in group chat. Maybe omitted. Might be null</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (<a class="reference internal" href="#tdproto-groupmembership"><span class="std std-ref">GroupMembership</span></a>) - Group chat members. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (array[<a class="reference internal" href="#tdproto-groupmembership"><span class="std std-ref">GroupMembership</span></a>]) - Group chat members. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_add_member</span></code> (boolean) - Can I add member to this group chat. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_remove_member</span></code> (boolean) - Can I remove member from this group chat. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_change_member_status</span></code> (boolean) - Can I change member status in this group chat. Maybe omitted</p></li>
@@ -541,7 +541,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">section_enabled</span></code> (boolean) - Project filter enabled. Maybe omitted. Might be null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">section</span></code> (string) - Project id if project filter enabled. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tags_enabled</span></code> (boolean) - Tags filter enabled. Maybe omitted. Might be null</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (string) - Tag ids if tags filter enabled. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (array[string]) - Tag ids if tags filter enabled. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task_status</span></code> (string) - Task status. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task_importance_enabled</span></code> (boolean) - Task importance filter enabled. Maybe omitted. Might be null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task_importance</span></code> (number) - Task importance if task importance filter enabled. Maybe omitted. Might be null</p></li>
@@ -567,14 +567,14 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_team_rights</span></code> (boolean) - Can contact add users to this team. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">is_archive</span></code> (boolean) - Contact deleted. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">botname</span></code> (string) - Bot name. Empty for users. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sections</span></code> (string) - Section ids</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sections</span></code> (array[string]) - Section ids</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_send_message</span></code> (boolean) - Can I send message to this contact. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cant_send_message_reason</span></code> (string) - Why I can’t send message to this chat (if can’t). Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_call</span></code> (boolean) - Can I call to this contact. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_create_task</span></code> (boolean) - Can I call create task for this contact. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_add_to_group</span></code> (boolean) - Can I add this contact to group chats. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_delete</span></code> (boolean) - Can I remove this contact from team. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">changeable_fields</span></code> (string) - Changeable fields. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">changeable_fields</span></code> (array[string]) - Changeable fields. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">family_name</span></code> (string) - Family name. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">given_name</span></code> (string) - Given name. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">patronymic</span></code> (string) - Patronymic, if any. Maybe omitted</p></li>
@@ -713,7 +713,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">front_version</span></code> (string) - Webclient version</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">app_title</span></code> (string) - Application title</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">landing_url</span></code> (string) - Landing page address, if any. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">app_schemes</span></code> (string) - Local applications urls</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">app_schemes</span></code> (array[string]) - Local applications urls</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">userver</span></code> (string) - Static files server address</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ios_app</span></code> (string) - Link to AppStore</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">android_app</span></code> (string) - Link to Google Play</p></li>
@@ -742,8 +742,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">auth_by_qr_code</span></code> (boolean) - QR-code / link authentication enabled. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">auth_by_sms</span></code> (boolean) - SMS authentication enabled. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">auth_2fa</span></code> (boolean) - Two-factor authentication (2FA) enabled. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">oauth_services</span></code> (<a class="reference internal" href="#tdproto-oauthservice"><span class="std std-ref">OAuthService</span></a>) - External services. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ice_servers</span></code> (<a class="reference internal" href="#tdproto-iceserver"><span class="std std-ref">ICEServer</span></a>) - ICE servers for WebRTC</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauth_services</span></code> (array[<a class="reference internal" href="#tdproto-oauthservice"><span class="std std-ref">OAuthService</span></a>]) - External services. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ice_servers</span></code> (array[<a class="reference internal" href="#tdproto-iceserver"><span class="std std-ref">ICEServer</span></a>]) - ICE servers for WebRTC</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">custom_server</span></code> (boolean) - True for premise installation</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">installation_type</span></code> (string) - Name of installation</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">installation_title</span></code> (string) - Installation title, used on login screen. Maybe omitted</p></li>
@@ -904,8 +904,8 @@
 <p>Complete integrations data, as received from server</p>
 <p><strong>Fields</strong>:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">integrations</span></code> (<a class="reference internal" href="#tdproto-integration"><span class="std std-ref">Integration</span></a>) - Currently existing integrations</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kinds</span></code> (<a class="reference internal" href="#tdproto-integrationkind"><span class="std std-ref">IntegrationKind</span></a>) - Types of integrations available for setup</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">integrations</span></code> (array[<a class="reference internal" href="#tdproto-integration"><span class="std std-ref">Integration</span></a>]) - Currently existing integrations</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kinds</span></code> (array[<a class="reference internal" href="#tdproto-integrationkind"><span class="std std-ref">IntegrationKind</span></a>]) - Types of integrations available for setup</p></li>
 </ul>
 </div>
 <div class="section" id="markupentity">
@@ -921,7 +921,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (string) - Url, for Link type. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">repl</span></code> (string) - Text replacement. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">time</span></code> (string) - Time, for Time type. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">childs</span></code> (<a class="reference internal" href="#tdproto-markupentity"><span class="std std-ref">MarkupEntity</span></a>) - List of internal markup entities. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">childs</span></code> (array[<a class="reference internal" href="#tdproto-markupentity"><span class="std std-ref">MarkupEntity</span></a>]) - List of internal markup entities. Maybe omitted</p></li>
 </ul>
 </div>
 <div class="section" id="message">
@@ -940,7 +940,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">chat_type</span></code> (<a class="reference internal" href="#tdproto-chattype"><span class="std std-ref">ChatType</span></a>) - Chat type</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">chat</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Chat id</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">links</span></code> (<a class="reference internal" href="#tdproto-messagelinks"><span class="std std-ref">MessageLinks</span></a>) - External/internals links. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">markup</span></code> (<a class="reference internal" href="#tdproto-markupentity"><span class="std std-ref">MarkupEntity</span></a>) - Markup entities. Experimental. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">markup</span></code> (array[<a class="reference internal" href="#tdproto-markupentity"><span class="std std-ref">MarkupEntity</span></a>]) - Markup entities. Experimental. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">important</span></code> (boolean) - Importance flag. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">edited</span></code> (string) - ISODateTimeString of message modification or deletion. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">received</span></code> (boolean) - Message was seen by anybody in chat. True or null. Maybe omitted</p></li>
@@ -950,10 +950,10 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">prev</span></code> (string) - Previous message id in this chat. Uid or null. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">is_first</span></code> (boolean) - This message is first in this chat. True or null. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">is_last</span></code> (boolean) - This message is first in this chat. True or null. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">uploads</span></code> (<a class="reference internal" href="#tdproto-upload"><span class="std std-ref">Upload</span></a>) - Message uploads. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">reactions</span></code> (<a class="reference internal" href="#tdproto-messagereaction"><span class="std std-ref">MessageReaction</span></a>) - Message reactions struct. Can be null. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uploads</span></code> (array[<a class="reference internal" href="#tdproto-upload"><span class="std std-ref">Upload</span></a>]) - Message uploads. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reactions</span></code> (array[<a class="reference internal" href="#tdproto-messagereaction"><span class="std std-ref">MessageReaction</span></a>]) - Message reactions struct. Can be null. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">reply_to</span></code> (<a class="reference internal" href="#tdproto-message"><span class="std std-ref">Message</span></a>) - Message that was replied to, if any. Maybe omitted. Might be null</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">linked_messages</span></code> (<a class="reference internal" href="#tdproto-message"><span class="std std-ref">Message</span></a>) - Forwarded messages. Can be null. Also contains double of ReplyTo for backward compatibility. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linked_messages</span></code> (array[<a class="reference internal" href="#tdproto-message"><span class="std std-ref">Message</span></a>]) - Forwarded messages. Can be null. Also contains double of ReplyTo for backward compatibility. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">notice</span></code> (boolean) - Has mention (&#64;). True or null. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">silently</span></code> (boolean) - Message has no pushes and did not affect any counters. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">editable_until</span></code> (string) - Author can change this message until date. Can be null. Maybe omitted</p></li>
@@ -1003,8 +1003,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">given_name</span></code> (string) - Given name (for “contact” mediatype). Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">family_name</span></code> (string) - Family name (for “contact” mediatype). Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">patronymic</span></code> (string) - Patronymic name (for “contact” mediatype). Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">phones</span></code> (string) - Contact phones list (for “contact” mediatype). Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (string) - Emails list (for “contact” mediatype). Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">phones</span></code> (array[string]) - Contact phones list (for “contact” mediatype). Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (array[string]) - Emails list (for “contact” mediatype). Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">stickerpack</span></code> (string) - Stickerpack name (for “sticker” subtype). Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pdf_version</span></code> (<a class="reference internal" href="#tdproto-pdfversion"><span class="std std-ref">PdfVersion</span></a>) - Pdf version, if any. Maybe omitted. Might be null</p></li>
 </ul>
@@ -1018,7 +1018,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (string) - Internal or external link</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> (string) - Text replacement</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">preview</span></code> (<a class="reference internal" href="#tdproto-messagelinkpreview"><span class="std std-ref">MessageLinkPreview</span></a>) - Optional preview info, for websites. Maybe omitted. Might be null</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">uploads</span></code> (<a class="reference internal" href="#tdproto-upload"><span class="std std-ref">Upload</span></a>) - Optional upload info. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uploads</span></code> (array[<a class="reference internal" href="#tdproto-upload"><span class="std std-ref">Upload</span></a>]) - Optional upload info. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nopreview</span></code> (boolean) - Website previews disabled. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">youtube_id</span></code> (string) - Optional youtube movie id. Maybe omitted</p></li>
 </ul>
@@ -1057,7 +1057,7 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (string) - Emoji</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">counter</span></code> (number) - Number of reactions</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">details</span></code> (<a class="reference internal" href="#tdproto-messagereactiondetail"><span class="std std-ref">MessageReactionDetail</span></a>) - Details</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">details</span></code> (array[<a class="reference internal" href="#tdproto-messagereactiondetail"><span class="std std-ref">MessageReactionDetail</span></a>]) - Details</p></li>
 </ul>
 </div>
 <div class="section" id="messagereactiondetail">
@@ -1231,10 +1231,10 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">custom_color_index</span></code> (number) - Custom task color. Maybe omitted. Might be null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (string) - Task description. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (string) - Task tags. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (array[string]) - Task tags. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">section</span></code> (string) - Task section UID. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">observers</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - User who follow the task. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">items</span></code> (string) - Items of the task. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">observers</span></code> (array[<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>]) - User who follow the task. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">items</span></code> (array[string]) - Items of the task. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">assignee</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - User who was assigned the task. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">deadline</span></code> (string) - Deadline time. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span></code> (boolean) - Is task public. Maybe omitted</p></li>
@@ -1244,8 +1244,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">urgency</span></code> (number) - Task urgency. Maybe omitted. Might be null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">complexity</span></code> (number) - Task complexity. Maybe omitted. Might be null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spent_time</span></code> (number) - Time spent. Maybe omitted. Might be null</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">linked_messages</span></code> (string) - Linked messages. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">uploads</span></code> (string) - Task uploads. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linked_messages</span></code> (array[string]) - Linked messages. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uploads</span></code> (array[string]) - Task uploads. Maybe omitted</p></li>
 </ul>
 </div>
 <div class="section" id="taskcolor">
@@ -1321,9 +1321,9 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">hide_empty</span></code> (boolean) - Disable this tab when it has no contents</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">show_counter</span></code> (boolean) - Show unread badge</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pagination</span></code> (boolean) - Enable pagination</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">filters</span></code> (<a class="reference internal" href="#tdproto-taskfilter"><span class="std std-ref">TaskFilter</span></a>) - Filters inside tab</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sort</span></code> (<a class="reference internal" href="#tdproto-tasksort"><span class="std std-ref">TaskSort</span></a>) - Sort available in tab</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unread_tasks</span></code> (<a class="reference internal" href="#tdproto-taskcounters"><span class="std std-ref">TaskCounters</span></a>) - Unread tasks with jid and counters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filters</span></code> (array[<a class="reference internal" href="#tdproto-taskfilter"><span class="std std-ref">TaskFilter</span></a>]) - Filters inside tab</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sort</span></code> (array[<a class="reference internal" href="#tdproto-tasksort"><span class="std std-ref">TaskSort</span></a>]) - Sort available in tab</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unread_tasks</span></code> (array[<a class="reference internal" href="#tdproto-taskcounters"><span class="std std-ref">TaskCounters</span></a>]) - Unread tasks with jid and counters</p></li>
 </ul>
 </div>
 <div class="section" id="team">
@@ -1339,11 +1339,11 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">max_message_update_age</span></code> (number) - Max message update/deletion age, in seconds</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">icons</span></code> (<a class="reference internal" href="#tdproto-icondata"><span class="std std-ref">IconData</span></a>) - Team icons</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">last_active</span></code> (boolean) - User last activity was in this team</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">changeable_statuses</span></code> (<a class="reference internal" href="#tdproto-teamstatus"><span class="std std-ref">TeamStatus</span></a>) - What status I can set to other team members. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">changeable_statuses</span></code> (array[<a class="reference internal" href="#tdproto-teamstatus"><span class="std std-ref">TeamStatus</span></a>]) - What status I can set to other team members. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bad_profile</span></code> (boolean) - My profile in this team isn’t full. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">need_confirmation</span></code> (boolean) - Need confirmation after invite to this team</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">use_patronymic</span></code> (boolean) - Patronymic in usernames for this team. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">user_fields</span></code> (string) - Username fields ordering</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_fields</span></code> (array[string]) - Username fields ordering</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">display_family_name_first</span></code> (boolean) - Family name should be first in display name. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">use_task_importance</span></code> (boolean) - Use importance field in task. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task_importance_min</span></code> (number) - Minimal value of task importance. Default is 1. Maybe omitted</p></li>
@@ -1356,7 +1356,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">uploads_size_limit</span></code> (number) - Maximum uploads size, bytes, if any. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">unread</span></code> (<span class="xref std std-ref">tdproto-TeamUnread</span>) - Unread message counters. Might be null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">me</span></code> (<a class="reference internal" href="#tdproto-contact"><span class="std std-ref">Contact</span></a>) - My profile in this team</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">contacts</span></code> (<a class="reference internal" href="#tdproto-contact"><span class="std std-ref">Contact</span></a>) - Team contacts. Used only for team creation. Maybe omitted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">contacts</span></code> (array[<a class="reference internal" href="#tdproto-contact"><span class="std std-ref">Contact</span></a>]) - Team contacts. Used only for team creation. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">single_group</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - For single group teams, jid of chat. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">theme</span></code> (<a class="reference internal" href="#tdproto-theme"><span class="std std-ref">Theme</span></a>) - Color theme, if any. Maybe omitted. Might be null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hide_archived_users</span></code> (boolean) - Don’t show archived users by default. Maybe omitted</p></li>
@@ -1543,8 +1543,8 @@
 <p><strong>Fields</strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">inviter</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Inviter id, if any. Maybe omitted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">teams</span></code> (<a class="reference internal" href="#tdproto-team"><span class="std std-ref">Team</span></a>) - Available teams</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">devices</span></code> (<span class="xref std std-ref">tdproto-PushDevice</span>) - Registered push devices</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">teams</span></code> (array[<a class="reference internal" href="#tdproto-team"><span class="std std-ref">Team</span></a>]) - Available teams</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">devices</span></code> (array[<span class="xref std std-ref">tdproto-PushDevice</span>]) - Registered push devices</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">phone</span></code> (string) - Phone for login. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (string) - Email for login. Maybe omitted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">family_name</span></code> (string) - Family name. Maybe omitted</p></li>
