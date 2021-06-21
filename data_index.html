@@ -167,6 +167,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#onlinecall">OnlineCall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#onlinecontact">OnlineContact</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pdfversion">PdfVersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pushdevice">PushDevice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#reaction">Reaction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#receivedmessage">ReceivedMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#remind">Remind</a></li>
@@ -197,7 +198,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#user">User</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#userwithme">UserWithMe</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#wallpaper">Wallpaper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#wikipage">WikiPage</a></li>
 </ul>
 </li>
 </ul>
@@ -460,7 +460,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">cant_send_message_reason</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Why I can’t send message to this chat (if can’t)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">collapsed</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Description collapsed. Used for tasks only</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">draft</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Last message draft, if any</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">draft_num</span></code> (number) <abbr title="Maybe omitted">💥</abbr> - Last message draft version , if any</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">draft_gentime</span></code> (number) <abbr title="Maybe omitted">💥</abbr> - Last message draft version, if any</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hidden</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Hidden chat</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">notifications_enabled</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Push notifications enabled</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">num_importants</span></code> (number) <abbr title="Maybe omitted">💥</abbr> - Number of important messages</p></li>
@@ -516,6 +516,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">can_delete_any_message</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Can I delete any message in this chat</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_set_important_any_message</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Can I change Important flag in any message in this chat</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">last_activity</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Date of the last message sent even if it was deleted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">draft_num</span></code> (number) <abbr title="Maybe omitted">💥</abbr> - Deprecated</p></li>
 </ul>
 </div>
 <div class="section" id="chatshort">
@@ -564,7 +565,6 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">mood</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Mood in this team</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<a class="reference internal" href="#tdproto-teamstatus"><span class="std std-ref">TeamStatus</span></a>) - Status in this team</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">last_activity</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Last activity in this team (iso datetime)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">add_to_team_rights</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Can contact add users to this team</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">is_archive</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Contact deleted</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">botname</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Bot name. Empty for users</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sections</span></code> (array[string]) - Section ids</p></li>
@@ -720,6 +720,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">theme</span></code> (string) - Default UI theme</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">min_ios_version</span></code> (string) - Minimal iOS application version required for this server. Used for breaking changes</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">min_android_version</span></code> (string) - Minimal android application version required for this server. Used for breaking changes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_corp_ios_version</span></code> (string) - Minimal iOS corp application version required for this server. Used for breaking changes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_corp_android_version</span></code> (string) - Minimal android corp application version required for this server. Used for breaking changes</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">free_registration</span></code> (boolean) - Free registration allowed</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">max_upload_mb</span></code> (number) - Maximum size of user’s upload</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">max_linked_messages</span></code> (number) - Maximum number of forwarded messages</p></li>
@@ -949,7 +951,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">has_previews</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Has link previews. True or null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prev</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Previous message id in this chat. Uid or null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">is_first</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - This message is first in this chat. True or null</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">is_last</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - This message is first in this chat. True or null</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">is_last</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - This message is last in this chat. True or null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">uploads</span></code> (array[<a class="reference internal" href="#tdproto-upload"><span class="std std-ref">Upload</span></a>]) <abbr title="Maybe omitted">💥</abbr> - Message uploads</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">reactions</span></code> (array[<a class="reference internal" href="#tdproto-messagereaction"><span class="std std-ref">MessageReaction</span></a>]) <abbr title="Maybe omitted">💥</abbr> - Message reactions struct. Can be null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">reply_to</span></code> (<a class="reference internal" href="#tdproto-message"><span class="std std-ref">Message</span></a>) <abbr title="Maybe omitted">💥</abbr> - Message that was replied to, if any</p></li>
@@ -1109,6 +1111,21 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">text_preview</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - First string of text content</p></li>
 </ul>
 </div>
+<div class="section" id="pushdevice">
+<span id="tdproto-pushdevice"></span><h2>PushDevice<a class="headerlink" href="#pushdevice" title="Permalink to this headline">¶</a></h2>
+<p>Push device info</p>
+<p><strong>Fields</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (string) - Type: android, ios, web, safari</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_id</span></code> (string) - Device id generated by client library</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">notification_token</span></code> (string) - Notification token</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">voip_notification_token</span></code> (string) - Notification token for VOIP (iOS only)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (string) - Readable device name</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data_pushes</span></code> (boolean) - Send silently data pushes that must be fully processed by app. Must be true for modern mobile clients</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data_badges</span></code> (boolean) - Send badge value as data. Experimental</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowed_notifications</span></code> (boolean) - deprecated</p></li>
+</ul>
+</div>
 <div class="section" id="reaction">
 <span id="tdproto-reaction"></span><h2>Reaction<a class="headerlink" href="#reaction" title="Permalink to this headline">¶</a></h2>
 <p>Emoji reaction</p>
@@ -1236,7 +1253,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">observers</span></code> (array[<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>]) <abbr title="Maybe omitted">💥</abbr> - User who follow the task</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">items</span></code> (array[string]) <abbr title="Maybe omitted">💥</abbr> - Items of the task</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">assignee</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) <abbr title="Maybe omitted">💥</abbr> - User who was assigned the task</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deadline</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Deadline time</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deadline</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Deadline time, if any</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Is task public</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">remind_at</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Fire a reminder at this time</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task_status</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Task status</p></li>
@@ -1360,6 +1377,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">single_group</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) <abbr title="Maybe omitted">💥</abbr> - For single group teams, jid of chat</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">theme</span></code> (<a class="reference internal" href="#tdproto-theme"><span class="std std-ref">Theme</span></a>) <abbr title="Maybe omitted">💥</abbr> - Color theme, if any</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hide_archived_users</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Don’t show archived users by default</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pinned</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Team pinned</p></li>
 </ul>
 </div>
 <div class="section" id="teamcounter">
@@ -1539,12 +1557,12 @@
 </div>
 <div class="section" id="userwithme">
 <span id="tdproto-userwithme"></span><h2>UserWithMe<a class="headerlink" href="#userwithme" title="Permalink to this headline">¶</a></h2>
-<p>Accouint data with extra information</p>
+<p>Account data with extra information</p>
 <p><strong>Fields</strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">inviter</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) <abbr title="Maybe omitted">💥</abbr> - Inviter id, if any</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">teams</span></code> (array[<a class="reference internal" href="#tdproto-team"><span class="std std-ref">Team</span></a>]) - Available teams</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">devices</span></code> (array[<span class="xref std std-ref">tdproto-PushDevice</span>]) - Registered push devices</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">devices</span></code> (array[<a class="reference internal" href="#tdproto-pushdevice"><span class="std std-ref">PushDevice</span></a>]) - Registered push devices</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">phone</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Phone for login</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Email for login</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">family_name</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Family name</p></li>
@@ -1569,17 +1587,6 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (string) - Unique identifier</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (string) - Localized description</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (string) - Url to jpg or png</p></li>
-</ul>
-</div>
-<div class="section" id="wikipage">
-<span id="tdproto-wikipage"></span><h2>WikiPage<a class="headerlink" href="#wikipage" title="Permalink to this headline">¶</a></h2>
-<p>Wiki page. Experimental</p>
-<p><strong>Fields</strong>:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">gentime</span></code> (number) - Object version</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">updated</span></code> (string) - Update time</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">editor</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Last editor contact id</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> (string) - Page text</p></li>
 </ul>
 </div>
 </div>

@@ -103,12 +103,12 @@
 <li class="toctree-l1"><a class="reference internal" href="websocket.html">Websockets documentation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Client events</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#client-activity">client.activity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#client-call-answer">client.call.answer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#client-call-buzzcancel">client.call.buzzcancel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#client-call-leave">client.call.leave</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#client-call-muteall">client.call.muteall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#client-call-offer">client.call.offer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#client-call-reject">client.call.reject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#client-call-sdp">client.call.sdp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#client-call-sound">client.call.sound</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#client-call-trickle">client.call.trickle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#client-chat-composing">client.chat.composing</a></li>
@@ -126,9 +126,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#server-call-checkfingerprint">server.call.checkfingerprint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-call-leave">server.call.leave</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-call-muteall">server.call.muteall</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#server-call-offer">server.call.offer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-call-reject">server.call.reject</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-call-restart">server.call.restart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#server-call-sdp">server.call.sdp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-call-sound">server.call.sound</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-call-state">server.call.state</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-call-talking">server.call.talking</a></li>
@@ -249,15 +249,6 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="client-call-answer">
-<h2>client.call.answer<a class="headerlink" href="#client-call-answer" title="Permalink to this headline">¶</a></h2>
-<p>Signal server about answer</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - Chat or contact id</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sdp</span></code> - SDP (session description protocol) data</p></li>
-</ul>
-<p><strong>MISSING EXAMPLE</strong></p>
-</div>
 <div class="section" id="client-call-buzzcancel">
 <h2>client.call.buzzcancel<a class="headerlink" href="#client-call-buzzcancel" title="Permalink to this headline">¶</a></h2>
 <p>Call buzzing cancelled</p>
@@ -338,6 +329,16 @@
 <span class="p">}</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="client-call-sdp">
+<h2>client.call.sdp<a class="headerlink" href="#client-call-sdp" title="Permalink to this headline">¶</a></h2>
+<p>For exchange Session Description with server when client’s Local Session Description is changed</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - Chat or contact id</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jsep</span></code> - SDP data</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> - Call id</p></li>
+</ul>
+<p><strong>MISSING EXAMPLE</strong></p>
 </div>
 <div class="section" id="client-call-sound">
 <h2>client.call.sound<a class="headerlink" href="#client-call-sound" title="Permalink to this headline">¶</a></h2>
@@ -498,7 +499,7 @@
 <h1>Server events<a class="headerlink" href="#server-events" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="server-call-answer">
 <h2>server.call.answer<a class="headerlink" href="#server-call-answer" title="Permalink to this headline">¶</a></h2>
-<p>Call parameters</p>
+<p>Call parameters (deprecated: use <cite>ServerCallSdp</cite>)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">candidates</span></code> - List of ICE candidates (when trickle = false)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - Chat or contact id</p></li>
@@ -622,15 +623,6 @@
 </ul>
 <p><strong>MISSING EXAMPLE</strong></p>
 </div>
-<div class="section" id="server-call-offer">
-<h2>server.call.offer<a class="headerlink" href="#server-call-offer" title="Permalink to this headline">¶</a></h2>
-<p>Signal client about offer</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - Chat or contact id</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sdp</span></code> - SDP (session description protocol) data</p></li>
-</ul>
-<p><strong>MISSING EXAMPLE</strong></p>
-</div>
 <div class="section" id="server-call-reject">
 <h2>server.call.reject<a class="headerlink" href="#server-call-reject" title="Permalink to this headline">¶</a></h2>
 <p>Call rejected</p>
@@ -647,6 +639,16 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - Chat or contact id</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">team</span></code> - Team id</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> - Call id</p></li>
+</ul>
+<p><strong>MISSING EXAMPLE</strong></p>
+</div>
+<div class="section" id="server-call-sdp">
+<h2>server.call.sdp<a class="headerlink" href="#server-call-sdp" title="Permalink to this headline">¶</a></h2>
+<p>For exchange Session Description with client when server’s Local Session Description is changed</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - Chat or contact id</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jsep</span></code> - SDP data</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> - Call id</p></li>
 </ul>
 <p><strong>MISSING EXAMPLE</strong></p>
@@ -783,10 +785,11 @@
 </div>
 <div class="section" id="server-chat-draft">
 <h2>server.chat.draft<a class="headerlink" href="#server-chat-draft" title="Permalink to this headline">¶</a></h2>
-<p>Changed draft message in chan</p>
+<p>Changed draft message in chat</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">draft</span></code> - Draft text</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">draft_num</span></code> - Draft version. TODO: use gentime instead</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">draft_gentime</span></code> - Draft version</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">draft_num</span></code> - Deprecated</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - Chat or contact id</p></li>
 </ul>
 <p><strong>MISSING EXAMPLE</strong></p>
