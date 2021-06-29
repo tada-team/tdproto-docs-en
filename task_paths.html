@@ -106,6 +106,7 @@
 <li class="toctree-l1"><a class="reference internal" href="data_index.html">Enums index</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_index.html#type-aliases">Type aliases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_index.html#json-objects-index">JSON objects index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_index.html#http-queries">HTTP Queries</a></li>
 </ul>
 
             
@@ -173,6 +174,32 @@
             
   <div class="section" id="task-related-paths">
 <h1>Task related paths<a class="headerlink" href="#task-related-paths" title="Permalink to this headline">¶</a></h1>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-v4-teams-team_id-tasks">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}/tasks</span></span><a class="headerlink" href="#get--api-v4-teams-team_id-tasks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the list of tasks</p>
+<p>Query parameters: <a class="reference internal" href="data_index.html#tdproto-taskfilterquery"><span class="std std-ref">TaskFilter</span></a></p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_teams__team_id__tasks">🔍 Try it!</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>team_id</strong> – ID of the team.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Response JSON Object</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
+<li><p><strong>result</strong> (<em>array</em>) – List of <a class="reference internal" href="data_index.html#tdproto-task"><span class="std std-ref">Task</span></a> objects.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Status Codes</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="http post">
 <dt class="sig sig-object http" id="post--api-v4-teams-team_id-tasks">
 <span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}/tasks</span></span><a class="headerlink" href="#post--api-v4-teams-team_id-tasks" title="Permalink to this definition">¶</a></dt>

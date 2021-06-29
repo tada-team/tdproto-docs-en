@@ -127,7 +127,6 @@
 <li class="toctree-l1"><a class="reference internal" href="#json-objects-index">JSON objects index</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#buttoncolors">ButtonColors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#calldevice">CallDevice</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#callevent">CallEvent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#callonliner">CallOnliner</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#chat">Chat</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#chatshort">ChatShort</a></li>
@@ -154,13 +153,13 @@
 <li class="toctree-l2"><a class="reference internal" href="#integrationform">IntegrationForm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#integrationkind">IntegrationKind</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#integrations">Integrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jsep">JSEP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#markupentity">MarkupEntity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#message">Message</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#messagecolors">MessageColors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#messagecontent">MessageContent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#messagelink">MessageLink</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#messagelinkpreview">MessageLinkPreview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#messagepush">MessagePush</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#messagereaction">MessageReaction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#messagereactiondetail">MessageReactionDetail</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#oauthservice">OAuthService</a></li>
@@ -198,6 +197,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#user">User</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#userwithme">UserWithMe</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#wallpaper">Wallpaper</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#http-queries">HTTP Queries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tdproto-taskfilterquery">TaskFilter</a></li>
 </ul>
 </li>
 </ul>
@@ -412,23 +415,6 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">useragent</span></code> (string) - Device description</p></li>
 </ul>
 </div>
-<div class="section" id="callevent">
-<span id="tdproto-callevent"></span><h2>CallEvent<a class="headerlink" href="#callevent" title="Permalink to this headline">¶</a></h2>
-<p>Call information</p>
-<p><strong>Fields</strong>:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Chat or contact id</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (string) - Call id</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">buzz</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Call buzzing</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">created</span></code> (string) - Creation date, iso datetime</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Call start. For direct calls can be empty when buzzing</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">finish</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Call finish</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">audiorecord</span></code> (boolean) - Call record enabled</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">onliners</span></code> (array[<a class="reference internal" href="#tdproto-callonliner"><span class="std std-ref">CallOnliner</span></a>]) <abbr title="Maybe omitted">💥</abbr> - Call participants</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gentime</span></code> (number) - Version</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timestamp</span></code> (number) - Deprecated: use gentime or created</p></li>
-</ul>
-</div>
 <div class="section" id="callonliner">
 <span id="tdproto-callonliner"></span><h2>CallOnliner<a class="headerlink" href="#callonliner" title="Permalink to this headline">¶</a></h2>
 <p>Call participant</p>
@@ -572,6 +558,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">cant_send_message_reason</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Why I can’t send message to this chat (if can’t)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_call</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Can I call to this contact</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_create_task</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Can I call create task for this contact</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">can_import_tasks</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Can I import tasks in this team</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_add_to_group</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Can I add this contact to group chats</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_delete</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Can I remove this contact from team</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">changeable_fields</span></code> (array[string]) <abbr title="Maybe omitted">💥</abbr> - Changeable fields</p></li>
@@ -601,7 +588,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">unread_first</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Show unread chats first in feed</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">munread_first</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Show unread chats first in feed in mobile app</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_add_to_team</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Can I add new members to this team</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">can_manage_sections</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Can I manage sections in this team</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">can_manage_sections</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Can I manage contact sections in this team</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">can_manage_projects</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Can I manage task projects in this team</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_manage_tags</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Can I manage tags in this team</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_manage_integrations</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Can I manage integrations in this team</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_manage_color_rules</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Can I manage color rules in this team</p></li>
@@ -807,7 +795,7 @@
 <p><strong>Fields</strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Contact id</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<a class="reference internal" href="#tdproto-groupstatus"><span class="std std-ref">GroupStatus</span></a>) - Status in group</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<a class="reference internal" href="#tdproto-groupstatus"><span class="std std-ref">GroupStatus</span></a>) <abbr title="Maybe omitted">💥</abbr> - Status in group</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_remove</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Can I remove this member</p></li>
 </ul>
 </div>
@@ -866,7 +854,6 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">group</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Chat id</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">help</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Full description</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kind</span></code> (string) - Unique integration name</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">-</span></code> (string) - DOCUMENTATION MISSING</p></li>
 </ul>
 </div>
 <div class="section" id="integrationfield">
@@ -908,6 +895,15 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">integrations</span></code> (array[<a class="reference internal" href="#tdproto-integration"><span class="std std-ref">Integration</span></a>]) - Currently existing integrations</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kinds</span></code> (array[<a class="reference internal" href="#tdproto-integrationkind"><span class="std std-ref">IntegrationKind</span></a>]) - Types of integrations available for setup</p></li>
+</ul>
+</div>
+<div class="section" id="jsep">
+<span id="tdproto-jsep"></span><h2>JSEP<a class="headerlink" href="#jsep" title="Permalink to this headline">¶</a></h2>
+<p>JavaScript Session Establishment Protocol</p>
+<p><strong>Fields</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sdp</span></code> (string) - Session Description Protocol information</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (string) - See <a class="reference external" href="https://rtcweb-wg.github.io/jsep/#rfc.section.4.1.8">https://rtcweb-wg.github.io/jsep/#rfc.section.4.1.8</a></p></li>
 </ul>
 </div>
 <div class="section" id="markupentity">
@@ -1032,24 +1028,6 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (string) - Website title or og:title content</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Website description</p></li>
-</ul>
-</div>
-<div class="section" id="messagepush">
-<span id="tdproto-messagepush"></span><h2>MessagePush<a class="headerlink" href="#messagepush" title="Permalink to this headline">¶</a></h2>
-<p>Push message over websockets. Readonly</p>
-<p><strong>Fields</strong>:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (string) - Push title</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subtitle</span></code> (string) - Push subtitle</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">message</span></code> (string) - Push body</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">icon_url</span></code> (string) - Absolute url to push icon</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">click_action</span></code> (string) - Url opened on click</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> (string) - Push tag (for join pushes)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">team</span></code> (string) - Team uid</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sender</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Sender contact id</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">chat</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Chat id</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">message_id</span></code> (string) - Message id</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">created</span></code> (string) - Message creation iso datetime</p></li>
 </ul>
 </div>
 <div class="section" id="messagereaction">
@@ -1587,6 +1565,35 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (string) - Unique identifier</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (string) - Localized description</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (string) - Url to jpg or png</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="http-queries">
+<h1>HTTP Queries<a class="headerlink" href="#http-queries" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tdproto-taskfilterquery">
+<span id="id1"></span><h2>TaskFilter<a class="headerlink" href="#tdproto-taskfilterquery" title="Permalink to this headline">¶</a></h2>
+<p>Query parameters for listing messages</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">assignee</span></code> - * ?assignee=jid,jid</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">created_gte</span></code> - * ?created_gte=&lt;isodate&gt;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">created_lte</span></code> - * ?created_lte=&lt;isodate&gt;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deadline_gte</span></code> - * ?deadline_gte=&lt;isodate&gt;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deadline_lte</span></code> - * ?deadline_lte=&lt;isodate&gt;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">done_gte</span></code> - * ?done_gte=&lt;isodate&gt;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">done_lte</span></code> - * ?done_lte=&lt;isodate&gt;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exclude_task_status</span></code> - * ?exclude_task_status = new,done | new | any</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gentime_gt</span></code> - gentime great than group/chat</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">member</span></code> - * ?member=jid,jid</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num</span></code> - * ?num=num1,num2,num3..</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">observer</span></code> - * ?observer=jid,jid // TODO: rename to ?follower=</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">owner</span></code> - * ?owner=jid,jid</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span></code> - * ?public=true|false</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q</span></code> - * ?q=</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">section</span></code> - * ?section=[ uid,uid… | “-” ]</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">short</span></code> - * ?short=true|false</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sort</span></code> - * ?sort = [ “created” | “-created” | “last_message” | “-last_message” | “deadline” | “-deadline” ]</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> - * ?tag=[ tag,tag,tag… | “-” ]</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">task_status</span></code> - * ?task_status = new,done | new | any</p></li>
 </ul>
 </div>
 </div>
