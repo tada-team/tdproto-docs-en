@@ -98,7 +98,7 @@
 <li class="toctree-l1"><a class="reference internal" href="chat_paths.html">Chat related paths</a></li>
 <li class="toctree-l1"><a class="reference internal" href="task_paths.html">Task related paths</a></li>
 <li class="toctree-l1"><a class="reference internal" href="group_paths.html">Group related paths</a></li>
-<li class="toctree-l1"><a class="reference internal" href="misc_paths.html">Miscelaneos paths</a></li>
+<li class="toctree-l1"><a class="reference internal" href="misc_paths.html">Miscellaneous paths</a></li>
 <li class="toctree-l1"><a class="reference internal" href="websocket.html">Websockets documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="events.html">Client events</a></li>
 <li class="toctree-l1"><a class="reference internal" href="events.html#server-events">Server events</a></li>
@@ -114,6 +114,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#type-aliases">Type aliases</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#activeuserdailystatlist">ActiveUserDailyStatList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#err">Err</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#isodatetimestring">ISODateTimeString</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#jid">JID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#messagelinks">MessageLinks</a></li>
@@ -153,6 +154,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#integrationform">IntegrationForm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#integrationkind">IntegrationKind</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#integrations">Integrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#invitableuser">InvitableUser</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#jsep">JSEP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#markupentity">MarkupEntity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#message">Message</a></li>
@@ -162,6 +164,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#messagelinkpreview">MessageLinkPreview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#messagereaction">MessageReaction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#messagereactiondetail">MessageReactionDetail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#myreactions">MyReactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#node">Node</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#oauthservice">OAuthService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#onlinecall">OnlineCall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#onlinecontact">OnlineContact</a></li>
@@ -177,6 +181,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#subtask">Subtask</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#switchercolors">SwitcherColors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tag">Tag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tariff">Tariff</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#task">Task</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#taskcolor">TaskColor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#taskcounters">TaskCounters</a></li>
@@ -355,6 +360,10 @@
 <p><strong>Base Type</strong>: ActiveUserDailyStat</p>
 <p><strong>Is array</strong></p>
 </div>
+<div class="section" id="err">
+<span id="tdproto-err"></span><h2>Err<a class="headerlink" href="#err" title="Permalink to this headline">¶</a></h2>
+<p><strong>Base Type</strong>: string</p>
+</div>
 <div class="section" id="isodatetimestring">
 <span id="tdproto-isodatetimestring"></span><h2>ISODateTimeString<a class="headerlink" href="#isodatetimestring" title="Permalink to this headline">¶</a></h2>
 <p>Date and time in RFC3339 format. Example: <code class="docutils literal notranslate"><span class="pre">2019-09-18T00:00:07.435409Z</span></code></p>
@@ -395,7 +404,7 @@
 <h1>JSON objects index<a class="headerlink" href="#json-objects-index" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="buttoncolors">
 <span id="tdproto-buttoncolors"></span><h2>ButtonColors<a class="headerlink" href="#buttoncolors" title="Permalink to this headline">¶</a></h2>
-<p>Button colors for app</p>
+<p>ButtonColors button colors for app</p>
 <p><strong>Fields</strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">brand_static</span></code> (<a class="reference internal" href="#tdproto-rgbcolor"><span class="std std-ref">RGBColor</span></a>) - Brand static color</p></li>
@@ -542,6 +551,7 @@
 <p><strong>Fields</strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Contact Id</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Node uid for external users</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (string) - Full name in chats</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">short_name</span></code> (string) - Short name in chats</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">contact_email</span></code> (string) - Contact email in this team</p></li>
@@ -705,6 +715,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">userver</span></code> (string) - Static files server address</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ios_app</span></code> (string) - Link to AppStore</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">android_app</span></code> (string) - Link to Google Play</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ios_corp_app</span></code> (string) - Link to AppStore for corporate app</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">android_corp_app</span></code> (string) - Link to Google Play for corporate app</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">theme</span></code> (string) - Default UI theme</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">min_ios_version</span></code> (string) - Minimal iOS application version required for this server. Used for breaking changes</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">min_android_version</span></code> (string) - Minimal android application version required for this server. Used for breaking changes</p></li>
@@ -727,6 +739,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">max_integration_comment_length</span></code> (number) - Maximum length for Integration comment</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">max_teams</span></code> (number) - Maximum teams for one account</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">max_message_search_limit</span></code> (number) - Maximum search result</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">multi_nodes</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Multi nodes mode (federation) enabled</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">afk_age</span></code> (number) - Max inactivity seconds</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">auth_by_password</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Password authentication enabled</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">auth_by_qr_code</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - QR-code / link authentication enabled</p></li>
@@ -737,10 +750,12 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">custom_server</span></code> (boolean) - True for premise installation</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">installation_type</span></code> (string) - Name of installation</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">installation_title</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Installation title, used on login screen</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">custom_app_icon_name</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Custom application icon name, if any</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">app_login_background</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - AppBackground image url, if any</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">web_login_background</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - WebBackground image url, if any</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">is_testing</span></code> (boolean) - Testing installation</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">metrika</span></code> (string) - Yandex metrika counter id</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amplitude_api_key</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Amplitude api key</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">min_search_length</span></code> (number) - Minimal chars number for starting global search</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">resend_timeout</span></code> (number) - Resend message in n seconds if no confirmation from server given</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sentry_dsn_js</span></code> (string) - Frontend sentry.io settings</p></li>
@@ -765,6 +780,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">allow_admin_mute</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Wiki pages in chats. Experimental</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">default_wallpaper</span></code> (<a class="reference internal" href="#tdproto-wallpaper"><span class="std std-ref">Wallpaper</span></a>) <abbr title="Maybe omitted">💥</abbr> - Default wallpaper url for mobile apps, if any</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">support_email</span></code> (string) - Support email</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">custom_theme</span></code> (boolean) - True if server has custom theme</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task_checklist</span></code> (boolean) - Deprecated</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">readonly_groups</span></code> (boolean) - Deprecated</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task_dashboard</span></code> (boolean) - Deprecated</p></li>
@@ -777,7 +793,7 @@
 </div>
 <div class="section" id="fontcolors">
 <span id="tdproto-fontcolors"></span><h2>FontColors<a class="headerlink" href="#fontcolors" title="Permalink to this headline">¶</a></h2>
-<p>Font colors for app</p>
+<p>FontColors font colors for app</p>
 <p><strong>Fields</strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> (<a class="reference internal" href="#tdproto-rgbcolor"><span class="std std-ref">RGBColor</span></a>) - Text color</p></li>
@@ -809,7 +825,7 @@
 </div>
 <div class="section" id="iconcolors">
 <span id="tdproto-iconcolors"></span><h2>IconColors<a class="headerlink" href="#iconcolors" title="Permalink to this headline">¶</a></h2>
-<p>Icon colors for app</p>
+<p>IconColors icon colors for app</p>
 <p><strong>Fields</strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<a class="reference internal" href="#tdproto-rgbcolor"><span class="std std-ref">RGBColor</span></a>) - Title color</p></li>
@@ -832,7 +848,7 @@
 </div>
 <div class="section" id="inputcolors">
 <span id="tdproto-inputcolors"></span><h2>InputColors<a class="headerlink" href="#inputcolors" title="Permalink to this headline">¶</a></h2>
-<p>Input colors for app</p>
+<p>InputColors input colors for app</p>
 <p><strong>Fields</strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">static</span></code> (<a class="reference internal" href="#tdproto-rgbcolor"><span class="std std-ref">RGBColor</span></a>) - Static color</p></li>
@@ -895,6 +911,17 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">integrations</span></code> (array[<a class="reference internal" href="#tdproto-integration"><span class="std std-ref">Integration</span></a>]) - Currently existing integrations</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kinds</span></code> (array[<a class="reference internal" href="#tdproto-integrationkind"><span class="std std-ref">IntegrationKind</span></a>]) - Types of integrations available for setup</p></li>
+</ul>
+</div>
+<div class="section" id="invitableuser">
+<span id="tdproto-invitableuser"></span><h2>InvitableUser<a class="headerlink" href="#invitableuser" title="Permalink to this headline">¶</a></h2>
+<p>Account from other team, Active Directory or server</p>
+<p><strong>Fields</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (string) - Account id</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Node uid for external users</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (string) - Full name</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icons</span></code> (<a class="reference internal" href="#tdproto-icondata"><span class="std std-ref">IconData</span></a>) - Icons</p></li>
 </ul>
 </div>
 <div class="section" id="jsep">
@@ -962,7 +989,7 @@
 </div>
 <div class="section" id="messagecolors">
 <span id="tdproto-messagecolors"></span><h2>MessageColors<a class="headerlink" href="#messagecolors" title="Permalink to this headline">¶</a></h2>
-<p>Message colors for app</p>
+<p>MessageColors message colors for app</p>
 <p><strong>Fields</strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bubble_sent</span></code> (<a class="reference internal" href="#tdproto-rgbcolor"><span class="std std-ref">RGBColor</span></a>) - Bubble sent color</p></li>
@@ -1048,6 +1075,25 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">created</span></code> (string) - When reaction added, iso datetime</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sender</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Reaction author</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (string) - Reaction emoji</p></li>
+</ul>
+</div>
+<div class="section" id="myreactions">
+<span id="tdproto-myreactions"></span><h2>MyReactions<a class="headerlink" href="#myreactions" title="Permalink to this headline">¶</a></h2>
+<p>Reactions to messages: frequently used and all available</p>
+<p><strong>Fields</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">top</span></code> (array[<a class="reference internal" href="#tdproto-reaction"><span class="std std-ref">Reaction</span></a>]) - My frequently used reactions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (array[<a class="reference internal" href="#tdproto-reaction"><span class="std std-ref">Reaction</span></a>]) - All available reactions</p></li>
+</ul>
+</div>
+<div class="section" id="node">
+<span id="tdproto-node"></span><h2>Node<a class="headerlink" href="#node" title="Permalink to this headline">¶</a></h2>
+<p>Node (for external users)</p>
+<p><strong>Fields</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (string) - Node uid</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (string) - Node title</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (boolean) - Synchronization with node works</p></li>
 </ul>
 </div>
 <div class="section" id="oauthservice">
@@ -1199,11 +1245,12 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">num</span></code> (number) - Task number in this team</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (string) - Title</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Can other team member see this task/group chat</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">task_status</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Subtask task status</p></li>
 </ul>
 </div>
 <div class="section" id="switchercolors">
 <span id="tdproto-switchercolors"></span><h2>SwitcherColors<a class="headerlink" href="#switchercolors" title="Permalink to this headline">¶</a></h2>
-<p>Switcher colors for app</p>
+<p>SwitcherColors switcher colors for app</p>
 <p><strong>Fields</strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">on</span></code> (<a class="reference internal" href="#tdproto-rgbcolor"><span class="std std-ref">RGBColor</span></a>) - On color</p></li>
@@ -1217,6 +1264,20 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (string) - Tag id</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (string) - Tag name</p></li>
+</ul>
+</div>
+<div class="section" id="tariff">
+<span id="tdproto-tariff"></span><h2>Tariff<a class="headerlink" href="#tariff" title="Permalink to this headline">¶</a></h2>
+<p>Tariff for teams</p>
+<p><strong>Fields</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (string) - Tariff id</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title_en</span></code> (string) - Title of tariff on enlish</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title_ru</span></code> (string) - Title of tariff on russian</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloud_space</span></code> (number) <abbr title="Maybe omitted">💥</abbr> - Cloud space reserved for storing team users uploads in megabytes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_members_in_team</span></code> (number) <abbr title="Maybe omitted">💥</abbr> - Maximum allowed number of members in a team</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_participants_per_call</span></code> (number) <abbr title="Maybe omitted">💥</abbr> - Maximum number of participants per call</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_upload_filesize</span></code> (number) <abbr title="Maybe omitted">💥</abbr> - maximum file size for uploading</p></li>
 </ul>
 </div>
 <div class="section" id="task">
@@ -1278,6 +1339,7 @@
 <p><strong>Fields</strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Id</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gentime</span></code> (number) - Object version</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sort_ordering</span></code> (number) <abbr title="Maybe omitted">💥</abbr> - Sort ordering</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> (string) - Text or “#{OtherTaskNumber}”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">checked</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Item checked</p></li>
@@ -1458,6 +1520,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">button</span></code> (<a class="reference internal" href="#tdproto-buttoncolors"><span class="std std-ref">ButtonColors</span></a>) <abbr title="Might be null">0️⃣</abbr> - Button colors for app</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">input</span></code> (<a class="reference internal" href="#tdproto-inputcolors"><span class="std std-ref">InputColors</span></a>) <abbr title="Might be null">0️⃣</abbr> - Input colors for app</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ic</span></code> (<a class="reference internal" href="#tdproto-iconcolors"><span class="std std-ref">IconColors</span></a>) <abbr title="Might be null">0️⃣</abbr> - Icon colors for app</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">web_base</span></code> (<span class="xref std std-ref">tdproto-WebBase</span>) <abbr title="Might be null">0️⃣</abbr> - WebBase colors for web</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">AppAccentColor</span></code> (<a class="reference internal" href="#tdproto-rgbcolor"><span class="std std-ref">RGBColor</span></a>) - Deprecated</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">AppPrimaryColor</span></code> (<a class="reference internal" href="#tdproto-rgbcolor"><span class="std std-ref">RGBColor</span></a>) - Deprecated</p></li>
 </ul>
