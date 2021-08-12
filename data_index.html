@@ -114,18 +114,21 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#type-aliases">Type aliases</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-ActiveUserDailyStatList">ActiveUserDailyStatList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tdproto-BotCommands">BotCommands</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-Err">Err</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-ISODateTimeString">ISODateTimeString</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-JID">JID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-MessageLinks">MessageLinks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-PushDeviceType">PushDeviceType</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-RGBColor">RGBColor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tdproto-SharpLinks">SharpLinks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-TaskFilterKey">TaskFilterKey</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-TaskSortKey">TaskSortKey</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-TaskTabKey">TaskTabKey</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#json-objects-index">JSON objects index</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tdproto-BotCommand">BotCommand</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-ButtonColors">ButtonColors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-CallDevice">CallDevice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-CallOnliner">CallOnliner</a></li>
@@ -141,6 +144,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-DeletedSection">DeletedSection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-DeletedTag">DeletedTag</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-DeletedTeam">DeletedTeam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tdproto-EasyApiMessage">EasyApiMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-Emoji">Emoji</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-Features">Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-FontColors">FontColors</a></li>
@@ -177,6 +181,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-Resp">Resp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-Section">Section</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-Session">Session</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tdproto-SharpLink">SharpLink</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tdproto-SharpLinkMeta">SharpLinkMeta</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-ShortMessage">ShortMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-SingleIcon">SingleIcon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tdproto-Subtask">Subtask</a></li>
@@ -369,6 +375,13 @@
 <p><strong>Is array</strong></p>
 </p>
 </div>
+<div class="section" id="tdproto-BotCommands">
+<h2>BotCommands<a class="headerlink" href="#tdproto-BotCommands" title="Permalink to this headline">¶</a></h2>
+<p><p>Bot commands list</p>
+<p><strong>Base Type</strong>: BotCommand</p>
+<p><strong>Is array</strong></p>
+</p>
+</div>
 <div class="section" id="tdproto-Err">
 <h2>Err<a class="headerlink" href="#tdproto-Err" title="Permalink to this headline">¶</a></h2>
 <p><p><strong>Base Type</strong>: string</p>
@@ -402,6 +415,13 @@
 <p><strong>Base Type</strong>: string</p>
 </p>
 </div>
+<div class="section" id="tdproto-SharpLinks">
+<h2>SharpLinks<a class="headerlink" href="#tdproto-SharpLinks" title="Permalink to this headline">¶</a></h2>
+<p><p>#-links autocomplete response</p>
+<p><strong>Base Type</strong>: SharpLink</p>
+<p><strong>Is array</strong></p>
+</p>
+</div>
 <div class="section" id="tdproto-TaskFilterKey">
 <h2>TaskFilterKey<a class="headerlink" href="#tdproto-TaskFilterKey" title="Permalink to this headline">¶</a></h2>
 <p><p><strong>Base Type</strong>: string</p>
@@ -420,6 +440,17 @@
 </div>
 <div class="section" id="json-objects-index">
 <h1>JSON objects index<a class="headerlink" href="#json-objects-index" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tdproto-BotCommand">
+<h2>BotCommand<a class="headerlink" href="#tdproto-BotCommand" title="Permalink to this headline">¶</a></h2>
+<p><p>Bot commands information</p>
+</p>
+<ul>
+<div class="line">Fields:</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">key</span></code><span> (string)</span><span> — </span><span>What should be inserted to the chat</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">title</span></code><span> (string)</span><span> — </span><span>What should be visible by user</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">args</span></code><span> (array[string])</span><span> — </span><span>Command options, if any</span></div>
+</ul>
+</div>
 <div class="section" id="tdproto-ButtonColors">
 <h2>ButtonColors<a class="headerlink" href="#tdproto-ButtonColors" title="Permalink to this headline">¶</a></h2>
 <p><p>ButtonColors button colors for app</p>
@@ -607,9 +638,11 @@
 <div class="line"><code class="docutils literal notranslate"><span class="pre">alt_send</span></code><span> (boolean)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Use Ctrl/Cmd + Enter instead Enter</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">asterisk_mention</span></code><span> (boolean)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Use * as &#64; for mentions</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">always_send_pushes</span></code><span> (boolean)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Send push notifications even contact is online</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">hide_pushes_content</span></code><span> (boolean)</span><abbr title="Might be null"> 0️⃣ </abbr><span> — </span><span>Hide pushes body</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">timezone</span></code><span> (string)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Timezone, if any</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">quiet_time_start</span></code><span> (string)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Quiet time start</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">quiet_time_finish</span></code><span> (string)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Quiet time finish</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">focus_until</span></code><span> (string)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Focus mode enabled until</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">group_notifications_enabled</span></code><span> (boolean)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Push notifications for group chats</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">task_notifications_enabled</span></code><span> (boolean)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Push notifications for task chats</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">contact_short_view</span></code><span> (boolean)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Short view in contact list</span></div>
@@ -724,6 +757,21 @@
 <div class="line"><code class="docutils literal notranslate"><span class="pre">uid</span></code><span> (string)</span><span> — </span><span>Team id</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">is_archive</span></code><span> (boolean)</span><span> — </span><span>Team deleted</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">gentime</span></code><span> (number)</span><span> — </span><span>Object version</span></div>
+</ul>
+</div>
+<div class="section" id="tdproto-EasyApiMessage">
+<h2>EasyApiMessage<a class="headerlink" href="#tdproto-EasyApiMessage" title="Permalink to this headline">¶</a></h2>
+<p><p>Simple api for integrations /api/message or /tasks/[team]/[num]/message</p>
+</p>
+<ul>
+<div class="line">Fields:</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">key</span></code><span> (string)</span><span> — </span><span>Comma separated api keys (for /api/message calls only)</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">message</span></code><span> (string)</span><span> — </span><span>Message text. Required</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">message_id</span></code><span> (string)</span><span> — </span><span>Message uuid. Optional</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">nopreview</span></code><span> (boolean)</span><span> — </span><span>Disable links preview</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">important</span></code><span> (boolean)</span><span> — </span><span>Mark message as important</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">silently</span></code><span> (boolean)</span><span> — </span><span>Disable counters and push notifications</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">convert_linebreaks</span></code><span> (boolean)</span><span> — </span><span>Convert “\n” to “\n”</span></div>
 </ul>
 </div>
 <div class="section" id="tdproto-Emoji">
@@ -1188,6 +1236,7 @@
 <div class="line">Fields:</div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">jid</span></code><span> (<a class="reference external" href="#tdproto-JID">JID</a><span>)</span></span><span> — </span><span>Contact id</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">afk</span></code><span> (boolean)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Is away from keyboard</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">focused</span></code><span> (boolean)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Focus mode enabled</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">mobile</span></code><span> (boolean)</span><span> — </span><span>Is mobile client</span></div>
 </ul>
 </div>
@@ -1296,6 +1345,31 @@
 <div class="line"><code class="docutils literal notranslate"><span class="pre">addr</span></code><span> (string)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>IP address</span></div>
 </ul>
 </div>
+<div class="section" id="tdproto-SharpLink">
+<h2>SharpLink<a class="headerlink" href="#tdproto-SharpLink" title="Permalink to this headline">¶</a></h2>
+<p><p>#-link autocomplete information</p>
+</p>
+<ul>
+<div class="line">Fields:</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">key</span></code><span> (string)</span><span> — </span><span>What should be inserted to the chat</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">title</span></code><span> (string)</span><span> — </span><span>What should be visible by user</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">meta</span></code><span> (<a class="reference external" href="#tdproto-SharpLinkMeta">SharpLinkMeta</a><span>)</span></span><span> — </span><span>Internal details</span></div>
+</ul>
+</div>
+<div class="section" id="tdproto-SharpLinkMeta">
+<h2>SharpLinkMeta<a class="headerlink" href="#tdproto-SharpLinkMeta" title="Permalink to this headline">¶</a></h2>
+<p><p>#-link autocomplete details</p>
+</p>
+<ul>
+<div class="line">Fields:</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">jid</span></code><span> (<a class="reference external" href="#tdproto-JID">JID</a><span>)</span></span><span> — </span><span>Chat id</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">chat_type</span></code><span> (<a class="reference external" href="#tdproto-ChatType">ChatType</a><span>)</span></span><span> — </span><span>Chat type</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">public</span></code><span> (boolean)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Is task or group public for non-guests</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">task_status</span></code><span> (string)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Task status (for tasks)</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">num</span></code><span> (number)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Task number (for tasks)</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">done</span></code><span> (boolean)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Deprecated: use `TaskStatus == “done”` comparsion</span></div>
+</ul>
+</div>
 <div class="section" id="tdproto-ShortMessage">
 <h2>ShortMessage<a class="headerlink" href="#tdproto-ShortMessage" title="Permalink to this headline">¶</a></h2>
 <p><p>Short message based on chat message</p>
@@ -1334,7 +1408,7 @@
 <div class="line"><code class="docutils literal notranslate"><span class="pre">title</span></code><span> (string)</span><span> — </span><span>Task title. Generated from number and description</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">num</span></code><span> (number)</span><span> — </span><span>Task number in this team</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">display_name</span></code><span> (string)</span><span> — </span><span>Title</span></div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">public</span></code><span> (boolean)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Can other team member see this task/group chat</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">public</span></code><span> (boolean)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Is task or group public for non-guests</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">task_status</span></code><span> (string)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Subtask task status</span></div>
 </ul>
 </div>
@@ -1367,6 +1441,7 @@
 <div class="line"><code class="docutils literal notranslate"><span class="pre">uid</span></code><span> (string)</span><span> — </span><span>Tariff id</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">title_en</span></code><span> (string)</span><span> — </span><span>Title of tariff in enlish</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">title_ru</span></code><span> (string)</span><span> — </span><span>Title of tariff in russian</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">price</span></code><span> (string)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Price of tariff</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">cloud_space</span></code><span> (number)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Cloud space reserved for storing team users uploads in megabytes</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">max_members_in_team</span></code><span> (number)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Maximum allowed number of members in a team</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">max_participants_per_call</span></code><span> (number)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Maximum number of participants per call</span></div>
@@ -1387,7 +1462,7 @@
 <div class="line"><code class="docutils literal notranslate"><span class="pre">items</span></code><span> (array[string])</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Items of the task</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">assignee</span></code><span> (<a class="reference external" href="#tdproto-JID">JID</a><span>)</span></span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>User who was assigned the task</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">deadline</span></code><span> (string)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Deadline time, if any</span></div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">public</span></code><span> (boolean)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Is task public</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">public</span></code><span> (boolean)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Is task or group public for non-guests</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">remind_at</span></code><span> (string)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Fire a reminder at this time</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">task_status</span></code><span> (string)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Task status</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">importance</span></code><span> (number)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Task importance</span></div>
@@ -1520,6 +1595,7 @@
 <div class="line"><code class="docutils literal notranslate"><span class="pre">theme</span></code><span> (<a class="reference external" href="#tdproto-Theme">Theme</a><span>)</span></span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Color theme, if any</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">hide_archived_users</span></code><span> (boolean)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Don’t show archived users by default</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">pinned</span></code><span> (boolean)</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Team pinned</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">available_tariffs</span></code><span> (array[string])</span><abbr title="Maybe omitted"> 💥 </abbr><span> — </span><span>Team’s available tariff by includig archive ones</span></div>
 </ul>
 </div>
 <div class="section" id="tdproto-TeamCounter">
@@ -1700,6 +1776,7 @@
 <div class="line"><code class="docutils literal notranslate"><span class="pre">alt_send</span></code><span> (boolean)</span><span> — </span><span>Use Ctrl/Cmd + Enter instead Enter</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">asterisk_mention</span></code><span> (boolean)</span><span> — </span><span>Use * as &#64; for mentions</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">always_send_pushes</span></code><span> (boolean)</span><span> — </span><span>Send pushes even user is online</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">hide_pushes_content</span></code><span> (boolean)</span><span> — </span><span>Hide pushes body</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">unread_first</span></code><span> (boolean)</span><span> — </span><span>Show unread chats in chat list first</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">munread_first</span></code><span> (boolean)</span><span> — </span><span>Show unread chats in chat list first on mobiles</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">timezone</span></code><span> (string)</span><span> — </span><span>Timezone</span></div>
@@ -1726,6 +1803,7 @@
 <div class="line"><code class="docutils literal notranslate"><span class="pre">alt_send</span></code><span> (boolean)</span><span> — </span><span>Use Ctrl/Cmd + Enter instead Enter</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">asterisk_mention</span></code><span> (boolean)</span><span> — </span><span>Use * as &#64; for mentions</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">always_send_pushes</span></code><span> (boolean)</span><span> — </span><span>Send pushes even user is online</span></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">hide_pushes_content</span></code><span> (boolean)</span><span> — </span><span>Hide pushes body</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">unread_first</span></code><span> (boolean)</span><span> — </span><span>Show unread chats in chat list first</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">munread_first</span></code><span> (boolean)</span><span> — </span><span>Show unread chats in chat list first on mobiles</span></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">timezone</span></code><span> (string)</span><span> — </span><span>Timezone</span></div>
