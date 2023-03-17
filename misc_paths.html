@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Miscellaneous paths &mdash; Tdproto docs  documentation</title>
@@ -13,9 +13,8 @@
   <![endif]-->
   
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -28,12 +27,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Tdproto docs
-            <img src="_static/logo.svg" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Tdproto docs
+              <img src="_static/logo.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -69,8 +72,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Miscellaneous paths</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Miscellaneous paths</li>
     <li class="wy-breadcrumbs-aside">
         
         <a style="color:red;font-size:36px;" href="https://tada-team.github.io/tdproto-docs-ru/misc_paths">🇷🇺</a>
@@ -84,20 +87,20 @@
            <div itemprop="articleBody">
              
   <section id="miscellaneous-paths">
-<h1>Miscellaneous paths<a class="headerlink" href="#miscellaneous-paths" title="Permalink to this headline"></a></h1>
+<h1>Miscellaneous paths<a class="headerlink" href="#miscellaneous-paths" title="Permalink to this heading"></a></h1>
 <dl class="http get">
 <dt class="sig sig-object http" id="get--api-v4-addr">
 <span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/addr</span></span><a class="headerlink" href="#get--api-v4-addr" title="Permalink to this definition"></a></dt>
 <dd><p>Returns client address for debuging purposes.</p>
 <p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_addr">🔍 Try it!</a></p>
 <dl class="field-list simple">
-<dt class="field-odd">Response JSON Object</dt>
+<dt class="field-odd">Response JSON Object<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
 <li><p><strong>result</strong> (<em>string</em>) – Address of the server.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Status Codes</dt>
+<dt class="field-even">Status Codes<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><span><a class="reference external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a></span> – No error.</p></li>
 </ul>
@@ -111,13 +114,13 @@
 <dd><p>Ping the server.</p>
 <p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_ping">🔍 Try it!</a></p>
 <dl class="field-list simple">
-<dt class="field-odd">Response JSON Object</dt>
+<dt class="field-odd">Response JSON Object<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
 <li><p><strong>result</strong> (<em>string</em>) – Set to <code class="docutils literal notranslate"><span class="pre">&quot;pong&quot;</span></code>.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Status Codes</dt>
+<dt class="field-even">Status Codes<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><span><a class="reference external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a></span> – No error.</p></li>
 </ul>
@@ -131,13 +134,13 @@
 <dd><p>Get the server features information.</p>
 <p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_features_json">🔍 Try it!</a></p>
 <dl class="field-list simple">
-<dt class="field-odd">Response JSON Object</dt>
+<dt class="field-odd">Response JSON Object<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
 <li><p><strong>result</strong> (<em>object</em>) – The <a class="reference internal" href="data_index.html#tdmodels-Features"><span class="std std-ref">Features</span></a> object.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Status Codes</dt>
+<dt class="field-even">Status Codes<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><span><a class="reference external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a></span> – No error.</p></li>
 </ul>
@@ -151,13 +154,13 @@
 <dd><p>Return number of unread messages.</p>
 <p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_badge">🔍 Try it!</a></p>
 <dl class="field-list simple">
-<dt class="field-odd">Response JSON Object</dt>
+<dt class="field-odd">Response JSON Object<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
 <li><p><strong>result</strong> (<em>int</em>) – Number of unread messages</p></li>
 </ul>
 </dd>
-<dt class="field-even">Status Codes</dt>
+<dt class="field-even">Status Codes<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><span><a class="reference external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a></span> – No error.</p></li>
 </ul>

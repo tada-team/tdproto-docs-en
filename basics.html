@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Basics &mdash; Tdproto docs  documentation</title>
@@ -13,9 +13,8 @@
   <![endif]-->
   
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -28,12 +27,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Tdproto docs
-            <img src="_static/logo.svg" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Tdproto docs
+              <img src="_static/logo.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -75,8 +78,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Basics</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Basics</li>
     <li class="wy-breadcrumbs-aside">
         
         <a style="color:red;font-size:36px;" href="https://tada-team.github.io/tdproto-docs-ru/basics">🇷🇺</a>
@@ -90,9 +93,9 @@
            <div itemprop="articleBody">
              
   <section id="basics">
-<h1>Basics<a class="headerlink" href="#basics" title="Permalink to this headline"></a></h1>
+<h1>Basics<a class="headerlink" href="#basics" title="Permalink to this heading"></a></h1>
 <section id="jid">
-<h2>JID<a class="headerlink" href="#jid" title="Permalink to this headline"></a></h2>
+<h2>JID<a class="headerlink" href="#jid" title="Permalink to this heading"></a></h2>
 <p>Basic unit is Team. Inside the team there are contacts, tasks,
 group chats. Contact from one team cannot interact with contact from
 another team.</p>
@@ -103,12 +106,12 @@ are a part of. If the user is a part of 3 teams they have 3 <code class="docutil
 If the user is new they have no <code class="docutils literal notranslate"><span class="pre">JID</span></code> s.</p>
 </section>
 <section id="is-archive-field">
-<h2><code class="docutils literal notranslate"><span class="pre">is_archive</span></code> field<a class="headerlink" href="#is-archive-field" title="Permalink to this headline"></a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">is_archive</span></code> field<a class="headerlink" href="#is-archive-field" title="Permalink to this heading"></a></h2>
 <p>Nothing get deleted from the database. Instead the <code class="docutils literal notranslate"><span class="pre">is_archive</span></code> flag
 will be set. The exception are devices.</p>
 </section>
 <section id="can-fields">
-<h2><code class="docutils literal notranslate"><span class="pre">can_*</span></code> fields<a class="headerlink" href="#can-fields" title="Permalink to this headline"></a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">can_*</span></code> fields<a class="headerlink" href="#can-fields" title="Permalink to this heading"></a></h2>
 <p>When a reply is received from a request there maybe an additional
 fields in the form of <code class="docutils literal notranslate"><span class="pre">can_DO_SOMETHING</span></code>. They mean “can I do
 something with the returned object?”</p>
@@ -129,7 +132,7 @@ Both web and mobile clients will change their logic.</p>
 tunnable rights. Using the can_* flags it will be backward compatible.</p>
 </section>
 <section id="features-json">
-<h2><code class="docutils literal notranslate"><span class="pre">/features.json</span></code><a class="headerlink" href="#features-json" title="Permalink to this headline"></a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">/features.json</span></code><a class="headerlink" href="#features-json" title="Permalink to this heading"></a></h2>
 <p>In the server root there is a <code class="docutils literal notranslate"><span class="pre">/features.json</span></code> file with fields that
 depend on installation. On different nodes different features might
 be enabled.</p>
